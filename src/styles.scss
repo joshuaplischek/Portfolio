@@ -21,3 +21,9 @@ app-root {
   align-items: center;     /* horizontale Zentrierung */
   min-height: 100vh;       /* Höhe des Viewports nutzen */
 }
+
+@mixin flexCenterAll {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
