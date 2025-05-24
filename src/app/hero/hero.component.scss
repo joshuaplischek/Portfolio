@@ -1,0 +1,18 @@
+#hero{
+    height: 100vh;
+    background-image: url(./../../../public/assets/img/backgrounds/hero/ripped-paper.png);
+    background-position: center;
+    background-size: cover;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    >div{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        width: 100%;
+        >p{
+            font-size: 64px;
+        }
+    }
+}
