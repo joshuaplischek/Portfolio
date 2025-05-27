@@ -101,6 +101,10 @@
         background-color: rgba(255, 255, 255, 0);
         border-radius: 25px;
         box-shadow: 2px 2px 1px 1px white;
+        &:hover{
+          cursor: pointer;
+          animation: pushButton 0.2s ease forwards;
+        }
       }
     }
   }

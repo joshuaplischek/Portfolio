@@ -1,0 +1,12 @@
+section{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 900px;
+    background-image: url('/assets/img/backgrounds/skill-backrounds/03_Skills.png');
+    background-position: center;
+    background-size: cover;
+    > div{
+        height: 100%;
+    }
+}
