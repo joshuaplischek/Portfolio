@@ -1,0 +1,46 @@
+@import "./../../styles.scss";
+
+section {
+  height: 700px;
+  @include flexCenterAll;
+  > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 600px;
+  }
+  > .about-me {
+    > div {
+      > h2 {
+        font-size: 54px;
+      }
+    }
+  }
+}
+
+.lets-talk-section {
+    display: flex;
+    justify-content: end;
+  > button {
+    width: 200px;
+  }
+}
+
+.ripped-paper-skills {
+  @include flexCenterAll;
+  flex-direction: column;
+  > img {
+    width: 550px;
+  }
+  > .yellow-paper {
+    z-index: 1;
+    top: 50px;
+    rotate: -5deg;
+  }
+
+  > .orange-paper {
+    z-index: -1;
+    bottom: 40px;
+    rotate: 2deg;
+  }
+}

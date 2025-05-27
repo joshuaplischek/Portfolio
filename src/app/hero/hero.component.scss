@@ -9,7 +9,7 @@
   }
   100% {
     width: 220px;
-    background-color: #3355ff;
+    background-color: $portfolioBlue;
   }
 }
 
@@ -129,7 +129,7 @@
     border-radius: 100%;
     transition: 0.5s ease;
     &:hover{
-      background-color: blue
+      background-color: $portfolioBlue;
     }
     }
   }
