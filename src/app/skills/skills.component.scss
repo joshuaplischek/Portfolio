@@ -1,12 +1,23 @@
+@keyframes blinkSmooth{
+    0%{
+    opacity: 0;
+    } 50%{
+        opacity: 1;
+    } 100%{
+        opacity: 0;
+    }
+}
+
 section {
   display: flex;
-  justify-content: space-around;
   align-items: center;
-  height: 900px;
+  justify-content: center;
+  height: 750px;
   background-image: url("/assets/img/backgrounds/skill-backrounds/03_Skills.png");
-  background-position: center;
+  background-position: center bottom;
   background-size: cover;
   > div {
+    top: -50px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -16,37 +27,74 @@ section {
   }
 }
 
+.skills-heading {
+  color: white;
+  flex: 1;
+  text-align: end;
+  > div {
+    top: -150px;
+    > div {
+      > h2 {
+        font-size: 54px;
+      }
+    }
+  }
+}
+
 .skills-description {
-  height: 100px;
-  width: 540px;
+  height: 150px;
+  width: 800px;
+  padding: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-image: url("/assets/img/backgrounds/skill-backrounds/1.Skills description.png");
   background-position: center;
   background-size: cover;
 }
 
 .skill-icons {
-  width: 600px;
+  width: 800px;
   height: 200px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 50px;
+  gap: 60px;
   > div {
-    height: 75px;
-    width: 75px;
+    height: 85px;
+    width: 85px;
     display: flex;
     align-items: center;
     justify-content: center;
     > img {
-      height: 62px;
-      width: 62px;
       filter: grayscale(1);
-      transition: 0.2s ease-in-out;
+      transition: 0.1s ease-in-out;
       &:hover {
         filter: grayscale(0);
-        height: 72px;
-        width: 72px;
+        height: 82px;
+        width: 82px;
       }
     }
+  }
+}
+
+.peel-off {
+  flex: 1;
+  > div {
+    > img {
+      top: 20px;
+      left: -50px;
+      rotate: 10deg;
+      height: 200px;
+      &:hover{ cursor: pointer;}
+    }
+  }
+  > img {
+    right: 50px;
+    rotate: 10deg;
+    top: 290px;
+    z-index: 1;
+    animation: blinkSmooth 2.5s infinite;
+    &:hover{ cursor: pointer;}
   }
 }
