@@ -1,12 +1,52 @@
-section{
+section {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 900px;
+  background-image: url("/assets/img/backgrounds/skill-backrounds/03_Skills.png");
+  background-position: center;
+  background-size: cover;
+  > div {
     display: flex;
-    justify-content: space-around;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
-    height: 900px;
-    background-image: url('/assets/img/backgrounds/skill-backrounds/03_Skills.png');
-    background-position: center;
-    background-size: cover;
-    > div{
-        height: 100%;
+    gap: 100px;
+    height: 100%;
+  }
+}
+
+.skills-description {
+  height: 100px;
+  width: 540px;
+  background-image: url("/assets/img/backgrounds/skill-backrounds/1.Skills description.png");
+  background-position: center;
+  background-size: cover;
+}
+
+.skill-icons {
+  width: 600px;
+  height: 200px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 50px;
+  > div {
+    height: 75px;
+    width: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    > img {
+      height: 62px;
+      width: 62px;
+      filter: grayscale(1);
+      transition: 0.2s ease-in-out;
+      &:hover {
+        filter: grayscale(0);
+        height: 72px;
+        width: 72px;
+      }
     }
+  }
 }
