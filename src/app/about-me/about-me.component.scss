@@ -34,7 +34,7 @@ section {
     box-shadow: 2px 2px 1px 1px rgb(0, 0, 0);
     &:hover{
       cursor: pointer;
-      animation: pushButton 0.2s forwards;
+      animation: pushButton 0.1s ease-out forwards;
     }
   }
 }

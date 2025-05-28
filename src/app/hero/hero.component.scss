@@ -103,7 +103,7 @@
         box-shadow: 2px 2px 1px 1px white;
         &:hover{
           cursor: pointer;
-          animation: pushButton 0.2s ease forwards;
+          animation: pushButton 0.1s ease-out forwards;
         }
       }
     }
