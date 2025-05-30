@@ -12,11 +12,15 @@
     background-position: center;
     border-radius: 25px;
   }
-  > div {
+  > .project-title {
     width: 100%;
-    padding-left: 50px;
+    padding: 0 30px;
     > h3 {
-        font-size: 24px;
+      font-size: 24px;
     }
+  }
+  > .project-description {
+    width: 100%;
+    padding: 0 30px;
   }
 }
