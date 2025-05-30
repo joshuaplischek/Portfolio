@@ -1,8 +1,9 @@
 section {
+  width: 100%;
+  height: auto;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  height: 700px;
   gap: 50px;
   font-size: 19px;
   > div {
