@@ -94,10 +94,14 @@ form {
   display: flex;
   flex-direction: column;
   > #mailInput {
-    top: -1px;
+    &:hover{
+      top: -1px;
+    }
   }
   > #textInput {
-    top: -2px;
+        &:hover{
+      top: -1px;
+    }
   }
   > div {
     height: 80px;
@@ -107,6 +111,7 @@ form {
     border-bottom: 1px solid $portfolioYellow;
     gap: 10px;
     &:hover {
+      top: -1px;
       z-index: 1;
       border-top: 1px $portfolioBlue solid;
       border-bottom: 1px $portfolioBlue solid;
@@ -124,6 +129,7 @@ form {
   display: flex;
   justify-content: center;
   align-items: center;
+  gap: 10px;
 
   > p {
     > a {
