@@ -9,7 +9,6 @@ section {
   background-position: top;
   background-size: cover;
   color: white;
-  padding: 0 100px;
   > div {
     width: 100%;
     height: 700px;
@@ -47,9 +46,9 @@ section {
       flex-direction: column;
       gap: 25px;
       > img {
-        height: 200px;
-        width: 200px;
-        rotate: 60deg;
+        height: 150px;
+        width: 150px;
+        rotate: 90deg;
       }
     }
     > .logoSticker {
@@ -94,14 +93,10 @@ form {
   display: flex;
   flex-direction: column;
   > #mailInput {
-    &:hover{
-      top: -1px;
-    }
+    top: -1px;
   }
   > #textInput {
-        &:hover{
-      top: -1px;
-    }
+    top: -2px;
   }
   > div {
     height: 80px;
@@ -111,10 +106,12 @@ form {
     border-bottom: 1px solid $portfolioYellow;
     gap: 10px;
     &:hover {
-      top: -1px;
       z-index: 1;
       border-top: 1px $portfolioBlue solid;
       border-bottom: 1px $portfolioBlue solid;
+    }
+    > label {
+      font-size: 20px;
     }
 
     > input {
