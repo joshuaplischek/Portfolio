@@ -9,5 +9,5 @@ import { HeaderComponent } from '../header/header.component';
   styleUrl: './hero.component.scss'
 })
 export class HeroComponent {
-
+  
 }
