@@ -1,36 +1,5 @@
 @import "./../../styles.scss";
-
-@keyframes slideOut {
-  0% {
-    width: 140px;
-  }
-  40% {
-    width: 230px;
-  }
-  65% {
-    width: 218px;
-  }
-  100% {
-    width: 220px;
-    background-color: $portfolioBlue;
-  }
-}
-
-@keyframes slideIn {
-  0% {
-    width: 220px;
-    background-color: $portfolioBlue;
-  }
-  40% {
-    width: 120px;
-  }
-  65% {
-    width: 150px;
-  }
-  100% {
-    width: 140px;
-  }
-}
+@import "./../animations.scss";
 
 #hero {
   height: 900px;
@@ -47,13 +16,14 @@
     height: 700px;
     #helloWorld {
       width: 900px;
+      height: 50px;
 
       .helloImage {
-        rotate: -150deg;
         top: -80px;
         left: 80px;
         opacity: 0;
         transition: all 0.3s ease;
+        animation: rotateOut 0.8s ease forwards;
       }
       .helloWorldText {
         @include flexCenterAll;
@@ -67,8 +37,7 @@
           animation: slideOut 0.5s ease forwards;
           ~ .helloImage {
             opacity: 1;
-            left: 170px;
-            rotate: 0deg;
+            animation: rotateIn 1s ease forwards;
           }
           > p {
             transition: 0.3s;
@@ -103,8 +72,23 @@
         right: 25px;
         background-color: white;
         color: black;
+        > img {
+          height: 240px;
+          width: auto;
+          filter: grayscale(1);
+
+          &:hover {
+            animation: 0.2s photoLightning ease forwards;
+          }
+        }
         > p {
+          top: -45px;
+          left: 75px;
+          width: 80px;
+          z-index: 1;
           font-family: "secondaryFont";
+          font-size: 20px;
+          cursor: default;
         }
       }
     }
@@ -160,5 +144,25 @@
         background-color: $portfolioBlue;
       }
     }
+  }
+}
+
+.animated-text {
+  font-size: 140px;
+  font-weight: bold;
+  transition: all 0.1s ease;
+  cursor: default;
+  > div {
+    display: inline-block;
+    transition: all 0.1s ease;
+  }
+  > div.upper:hover {
+    color: $portfolioYellow;
+    text-transform: lowercase;
+  }
+
+  > div.lower:hover {
+    color: $portfolioYellow;
+    text-transform: uppercase;
   }
 }

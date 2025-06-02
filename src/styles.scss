@@ -14,22 +14,9 @@ $portfolioOrange: #e77e60;
 
 $portfolioYellow: #e1b419;
 
-@keyframes pushButton {
-  0% {
-    top: 0;
-    left: 0;
-  }
-  50%{
-    top: 1px;
-    left: 1px;
-  }
-  100% {
-    top: 2px;
-    left: 2px;
-    background-color: $portfolioOrange;
-    box-shadow: none;
-  }
-}
+
+
+
 
 * {
   position: relative;
