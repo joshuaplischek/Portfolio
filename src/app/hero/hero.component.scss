@@ -21,9 +21,7 @@
       .helloImage {
         top: -80px;
         left: 80px;
-        opacity: 0;
         transition: all 0.3s ease;
-        animation: rotateOut 0.8s ease forwards;
       }
       .helloWorldText {
         @include flexCenterAll;
@@ -31,27 +29,9 @@
         width: 140px;
         border: 1px solid white;
         border-radius: 25px;
-        animation: slideIn 0.5s ease forwards;
 
-        &:hover {
-          animation: slideOut 0.5s ease forwards;
-          ~ .helloImage {
-            opacity: 1;
-            animation: rotateIn 1s ease forwards;
-          }
-          > p {
-            transition: 0.3s;
-            opacity: 0;
-            transition-delay: 0.15s;
-          }
-          #myNameIs {
-            opacity: 1;
-            transition-delay: 0.15s;
-          }
-        }
         #myNameIs {
           position: absolute;
-          opacity: 0;
         }
       }
     }
@@ -143,6 +123,11 @@
       &:hover {
         background-color: $portfolioBlue;
       }
+      >a{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
     }
   }
 }
@@ -164,5 +149,41 @@
   > div.lower:hover {
     color: $portfolioYellow;
     text-transform: uppercase;
+  }
+}
+
+.animate-in {
+  animation: slideOut 0.5s ease forwards;
+  cursor: default;
+  ~ .helloImage {
+    opacity: 1;
+    animation: rotateIn 1s ease forwards;
+  }
+  > p {
+    transition: 0.3s;
+    opacity: 0;
+    transition-delay: 0.15s;
+  }
+  #myNameIs {
+    opacity: 1;
+    transition-delay: 0.15s;
+  }
+}
+
+.animate-out {
+  animation: slideIn 0.5s ease forwards;
+
+  ~ .helloImage {
+    animation: rotateOut 0.8s ease forwards;
+  }
+}
+
+.fade {
+
+  ~ .helloImage {
+    opacity: 0;
+  }
+  #myNameIs {
+    opacity: 0;
   }
 }

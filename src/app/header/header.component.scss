@@ -5,17 +5,18 @@ header {
   align-items: center;
   height: 70px;
   gap: 100px;
-  > a {
-    color: white;
-  }
   > div {
+    > a {
+      color: white;
+    }
+  }
+  > .languageSwitch {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
     width: 60px;
     color: white;
   }
-
   > img {
     width: 50px;
     height: 50px;
@@ -25,4 +26,25 @@ header {
       filter: invert(1);
     }
   }
+}
+
+.about-me {
+  display: flex;
+  flex-direction: column;
+  >.reveal-container {
+  height: 42px; /* Bildhöhe */
+  overflow: hidden;
+  position: relative;
+}
+
+.reveal-image {
+  transform: translateY(-100%);
+  animation: revealDown 0.3s ease-out forwards;
+}
+
+@keyframes revealDown {
+  to {
+    transform: translateY(0);
+  }
+}
 }

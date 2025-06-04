@@ -6,8 +6,19 @@ import { HeaderComponent } from '../header/header.component';
   standalone: true,
   imports: [HeaderComponent],
   templateUrl: './hero.component.html',
-  styleUrl: './hero.component.scss'
+  styleUrl: './hero.component.scss',
 })
 export class HeroComponent {
   
+  onMouseEnter(element: HTMLElement) {
+    element.classList.remove('animate-out');
+    element.classList.remove('fade');
+    element.classList.add('animate-in');
+  }
+
+  onMouseLeave(element: HTMLElement) {
+    element.classList.remove('animate-in');
+    element.classList.add('fade');
+    element.classList.add('animate-out');
+  }
 }

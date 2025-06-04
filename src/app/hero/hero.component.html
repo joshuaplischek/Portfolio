@@ -2,12 +2,12 @@
   <app-header></app-header>
     <div class="hero-title-content">
         <div id="helloWorld">
-            <div class="helloWorldText">
+            <div #helloWorldElement class="helloWorldText fade" (mouseenter)="onMouseEnter(helloWorldElement)" (mouseleave)="onMouseLeave(helloWorldElement)">
                 <p>Hello world</p>
                 <p id="myNameIs">I'M JOSHUA PLISCHEK</p>
             </div>
                 <img class="helloImage" src="/assets/img/icons/hello-icon.png" alt="hello icon">
-        </div>
+        </div> 
         <div id="frontEndImageContainer">
             <div class="animated-text">
                 <div class="upper">F</div>
