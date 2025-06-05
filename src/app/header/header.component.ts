@@ -8,5 +8,26 @@ import { Component } from '@angular/core';
   styleUrl: './header.component.scss'
 })
 export class HeaderComponent {
+    isEnglish = false;
 
+  onLanguageChange(event: Event) {
+    const checkbox = event.target as HTMLInputElement;
+    if (checkbox.checked) {
+      this.setEnglish();
+    } else {
+      this.setGerman();
+    }
+  }
+
+  private setEnglish() {
+    this.isEnglish = true;
+    // Hier Logik für Englisch einfügen
+    console.log('Sprache auf Englisch gesetzt');
+  }
+
+  private setGerman() {
+    this.isEnglish = false;
+    // Hier Logik für Deutsch einfügen
+    console.log('Sprache auf Deutsch gesetzt');
+  }
 }

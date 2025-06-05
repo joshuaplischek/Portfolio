@@ -1,3 +1,5 @@
+@import "./../../styles.scss#";
+
 header {
   display: flex;
   flex-direction: row;
@@ -13,9 +15,15 @@ header {
   > .languageSwitch {
     display: flex;
     flex-direction: row;
+    align-items: center;
     justify-content: space-evenly;
-    width: 60px;
+    width: 120px;
     color: white;
+    >div{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
   }
   > img {
     width: 50px;
@@ -31,20 +39,124 @@ header {
 .about-me {
   display: flex;
   flex-direction: column;
-  >.reveal-container {
-  height: 42px; /* Bildhöhe */
-  overflow: hidden;
-  position: relative;
-}
+  .about-me-underline{
+    opacity: 0;
+    transition: ease-in-out 0.3s all;
+    position: absolute;
+    top: -12px;
+    left: -10px;
+  }
 
-.reveal-image {
-  transform: translateY(-100%);
-  animation: revealDown 0.3s ease-out forwards;
-}
-
-@keyframes revealDown {
-  to {
-    transform: translateY(0);
+  &:hover {
+    z-index: 1;
+    .about-me-underline {
+      opacity: 1;
+      z-index: -1;
+    }
   }
 }
+
+.skills {
+  display: flex;
+  flex-direction: column;
+  .skills-underline {
+    opacity: 0;
+    transition: ease-in-out 0.3s all;
+    position: absolute;
+    top: -12px;
+    left: -10px;
+  }
+
+  &:hover {
+    z-index: 1;
+    .skills-underline {
+      opacity: 1;
+      z-index: -1;
+    }
+  }
+}
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  .contact-underline {
+    opacity: 0;
+    transition: ease-in-out 0.3s all;
+    position: absolute;
+    top: -12px;
+    left: -10px;
+  }
+
+  &:hover {
+    z-index: 1;
+    .contact-underline {
+      opacity: 1;
+      z-index: -1;
+    }
+  }
+}
+
+.projects {
+  display: flex;
+  flex-direction: column;
+  .projects-underline {
+    opacity: 0;
+    transition: ease-in-out 0.3s all;
+    position: absolute;
+    top: -12px;
+    left: -10px;
+  }
+
+  &:hover {
+    z-index: 1;
+    .projects-underline {
+      opacity: 1;
+      z-index: -1;
+    }
+  }
+}
+
+.switch {
+  position: relative;
+  height: 1rem;
+  width: 2.8rem;
+  cursor: pointer;
+  appearance: none;
+  -webkit-appearance: none;
+  border-radius: 9999px;
+  background-color: rgba(100, 116, 139, 0.377);
+  transition: all .3s ease;
+}
+
+.switch:checked {
+  background-color: $portfolioOrange;
+}
+
+.switch::before {
+  position: absolute;
+  content: "";
+  left: calc(1.5rem - 1.5rem);
+  top: calc(1.2rem - 1.5rem);
+  display: block;
+  height: 1.3rem;
+  width: 1.3rem;
+  cursor: pointer;
+  border: 1px solid rgba(100, 116, 139, 0.527);
+  border-radius: 9999px;
+  background-color: $portfolioBlue;
+  box-shadow: 0 3px 10px rgba(100, 116, 139, 0.327);
+  transition: all .3s ease;
+}
+
+.switch:hover::before {
+  box-shadow: 0 0 0px 8px rgba(0, 0, 0, .15)
+}
+
+.switch:checked:hover::before {
+  box-shadow: 0 0 0px 8px rgba(72, 116, 236, 0.15)
+}
+
+.switch:checked:before {
+  transform: translateX(100%);
+  border-color: $portfolioBlue;
 }

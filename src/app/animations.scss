@@ -136,3 +136,39 @@
     filter: contrast(160%);
   }
 }
+
+@keyframes verticalReveal {
+  0% {
+    clip-path: polygon(50% 0%, 50% 0%, 50% 0%, 50% 0%);
+  }
+  10% {
+    clip-path: polygon(50% 0%, 50% 10%, 50% 10%, 50% 0%);
+  }
+  20% {
+    clip-path: polygon(50% 0%, 50% 20%, 50% 20%, 50% 0%);
+  }
+  30% {
+    clip-path: polygon(50% 0%, 50% 30%, 50% 30%, 50% 0%);
+  }
+  40% {
+    clip-path: polygon(50% 0%, 50% 40%, 50% 40%, 50% 0%);
+  }
+  50% {
+    clip-path: polygon(50% 0%, 50% 50%, 50% 50%, 50% 0%);
+  }
+  60% {
+    clip-path: polygon(50% 0%, 50% 60%, 50% 60%, 50% 0%);
+  }
+  70% {
+    clip-path: polygon(50% 0%, 50% 70%, 50% 70%, 50% 0%);
+  }
+  80% {
+    clip-path: polygon(50% 0%, 50% 80%, 50% 80%, 50% 0%);
+  }
+  90% {
+    clip-path: polygon(50% 0%, 50% 90%, 50% 90%, 50% 0%);
+  }
+  100% {
+    clip-path: polygon(50% 0%, 50% 100%, 50% 100%, 50% 0%);
+  }
+}
