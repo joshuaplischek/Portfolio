@@ -1,8 +1,14 @@
+import { CommonModule } from '@angular/common';
 import { Component, Input } from '@angular/core';
+
+interface Technology {
+  imgPath: string;
+  name: string;
+}
 
 @Component({
   selector: 'app-project-template',
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './project-template.component.html',
   styleUrl: './project-template.component.scss'
 })
@@ -20,4 +26,5 @@ export class ProjectTemplateComponent {
   @Input() projectInfoImg: string = '';
   @Input() projectGitHubBtn: string = '';
   @Input() projectLiveTestBtn: string = '';
+  @Input() technologies: Technology[] = [];
 }

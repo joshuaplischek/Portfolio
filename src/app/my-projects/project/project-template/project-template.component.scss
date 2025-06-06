@@ -65,6 +65,24 @@
   animation: drawAnimation 4s infinite;
 }
 
+.technologies-container{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  >div{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    >img{
+      height: 30px;
+    }
+  }
+}
+
 @media (max-width: 1500px) {
   .project-info-site {
     justify-content: space-between;

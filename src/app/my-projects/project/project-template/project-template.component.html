@@ -22,8 +22,13 @@
       <p>{{ projectDurationInfo }}</p>
     </div>
     <div>
-      <!-- html, css, angular, typescript, etc.. -->
-    </div>
+        <div class="technologies-container">
+          <div class="technology" *ngFor="let tech of technologies">
+            <img [src]="tech.imgPath" [alt]="tech.name" />
+            <p>{{ tech.name }}</p>
+          </div>
+        </div>
+      </div>
   </div>
   <div class="right-container">
     <!-- right container -->
@@ -32,8 +37,18 @@
       <img src="{{ projectInfoImg }}" alt="" />
     </div>
     <div class="link-btns">
-      <button class="link-to-git-hub" (click)="window.open(projectGitHubBtn, '_blank')">GitHub</button>
-      <button class="link-to-live-test" (click)="window.open(projectLiveTestBtn, '_blank')">Live Test</button>
+      <button
+        class="link-to-git-hub"
+        (click)="window.open(projectGitHubBtn, '_blank')"
+      >
+        GitHub
+      </button>
+      <button
+        class="link-to-live-test"
+        (click)="window.open(projectLiveTestBtn, '_blank')"
+      >
+        Live Test
+      </button>
     </div>
   </div>
 </div>
