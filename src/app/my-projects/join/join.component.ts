@@ -7,7 +7,7 @@ import { RouterModule } from '@angular/router';
   selector: 'app-join',
   imports: [ProjectTemplateComponent, HeaderComponent,RouterModule],
   templateUrl: './join.component.html',
-  styleUrl: './join.component.scss'
+  styleUrl: '../my-projects-template.scss'
 })
 export class JoinComponent {
 

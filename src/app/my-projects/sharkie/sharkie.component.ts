@@ -6,7 +6,7 @@ import { HeaderComponent } from "../../header/header.component";
   selector: 'app-sharkie',
   imports: [ProjectTemplateComponent, HeaderComponent],
   templateUrl: './sharkie.component.html',
-  styleUrl: './sharkie.component.scss'
+  styleUrl: '../my-projects-template.scss'
 })
 export class SharkieComponent {
 

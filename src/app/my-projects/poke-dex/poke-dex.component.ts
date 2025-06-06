@@ -6,7 +6,7 @@ import { HeaderComponent } from "../../header/header.component";
   selector: 'app-poke-dex',
   imports: [ProjectTemplateComponent, HeaderComponent],
   templateUrl: './poke-dex.component.html',
-  styleUrl: './poke-dex.component.scss'
+  styleUrl: '../my-projects-template.scss'
 })
 export class PokeDexComponent {
 
