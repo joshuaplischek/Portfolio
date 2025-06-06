@@ -1,32 +1,39 @@
 <div class="project-info-site">
-  <div>
+  <div class="left-container">
     <!-- left container -->
-    <div><h1>{{projectTitle}}</h1></div>
-    <div>
-      <h2>{{projectDescription}}</h2>
-      <p>{{projectDescriptionText}}</p>
+    <div class="project-heading">
+      <h1>{{ projectTitle }}</h1>
+      <img
+        class="drawing-line"
+        src="/assets/img/about-me/underlines/8542ffc9296fd0ecc62b7bb7886c355ebe841e45.png"
+        alt=""
+      />
     </div>
     <div>
-      <h2>{{projectDetails}}</h2>
-      <p>{{projectDetailsText}}</p>
+      <h2>{{ projectDescription }}</h2>
+      <p>{{ projectDescriptionText }}</p>
     </div>
     <div>
-      <h3>{{projectDuration}}</h3>
-      <p>{{projectDurationInfo}}</p>
+      <h2>{{ projectDetails }}</h2>
+      <p>{{ projectDetailsText }}</p>
+    </div>
+    <div>
+      <h3>{{ projectDuration }}</h3>
+      <p>{{ projectDurationInfo }}</p>
     </div>
     <div>
       <!-- html, css, angular, typescript, etc.. -->
     </div>
   </div>
-  <div>
+  <div class="right-container">
     <!-- right container -->
     <div>
-      <img src="{{projectExampleImg}}" alt="" />
-      <img src="{{projectInfoImg}}" alt="" />
+      <img src="{{ projectExampleImg }}" alt="" />
+      <img src="{{ projectInfoImg }}" alt="" />
     </div>
-    <div>
-      <button>{{projectGitHubBtn}}</button>
-      <button>{{projectLiveTestBtn}}</button>
+    <div class="link-btns">
+      <button class="link-to-git-hub" (click)="window.open(projectGitHubBtn, '_blank')">GitHub</button>
+      <button class="link-to-live-test" (click)="window.open(projectLiveTestBtn, '_blank')">Live Test</button>
     </div>
   </div>
 </div>

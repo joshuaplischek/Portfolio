@@ -7,6 +7,7 @@ import { Component, Input } from '@angular/core';
   styleUrl: './project-template.component.scss'
 })
 export class ProjectTemplateComponent {
+  window = window;
   @Input() projectTitle: string = '';
   @Input() projectDescription: string = '';
   @Input() projectDescriptionText: string = '';

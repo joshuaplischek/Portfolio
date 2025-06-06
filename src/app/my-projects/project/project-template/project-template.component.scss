@@ -1,0 +1,78 @@
+@import "./../../../../styles.scss";
+@import "./../../../animations.scss";
+
+.project-info-site {
+  max-height: 1080px;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 50px;
+}
+
+.left-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 620px;
+  height: 100%;
+  font-size: 18px;
+  gap: 40px;
+}
+
+.right-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 40px;
+  > .link-btns {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    gap: 20px;
+  }
+  > div {
+    > button {
+      color: white;
+      font-size: 16px;
+      height: 40px;
+      width: 140px;
+      border: 1px solid white;
+      background-color: rgba(255, 255, 255, 0);
+      border-radius: 25px;
+      box-shadow: 2px 2px 1px 1px white;
+    }
+  }
+}
+
+.project-heading {
+  > h1 {
+    font-size: 80px;
+    font-weight: bold;
+  }
+  > img {
+    top: -10px;
+    width: 200px;
+    height: 20px;
+  }
+}
+
+.drawing-line {
+  position: relative;
+  mask: linear-gradient(to right, black 50%, transparent 50%);
+  mask-size: 200% 100%;
+  animation: drawAnimation 4s infinite;
+}
+
+@media (max-width: 1500px) {
+  .project-info-site {
+    justify-content: space-between;
+  }
+}
+
+@media (max-width: 1100px) {
+  .project-info-site {
+    flex-direction: column;
+  }
+}

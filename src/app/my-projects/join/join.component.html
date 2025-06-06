@@ -1,14 +1,29 @@
 <section>
   <app-header></app-header>
-  <div>
-    <img src="" alt="" />
-    <p>Zurück</p>
+  <div id="goBack">
+    <img [routerLink]="['/']"
+      src="/assets/img/my-projects/elements/left-arrow.png"
+      alt="image of an arrow"
+    />
+    <p [routerLink]="['/']">Zurück</p>
   </div>
   <app-project-template
-  [projectTitle]="'Join'">
-</app-project-template>
-  <div>
+    [projectTitle]="'Join'"
+    [projectDescription]="'Beschreibung'"
+    [projectDescriptionText]="'Aufgabenmanager inspiriert vom Kanban-System. Erstelle und organisiere Aufgaben mithilfe von Drag-and-Drop-Funktionen, weise Benutzern und Kategorien zu.'"
+    [projectDetails]="'Umsetzungsdetails'"
+    [projectDetailsText]="'Kurzer Text, der deine Rolle oder den Workflow für dieses spezifische Projekt beschreibt. Gib einem Recruiter einen Einblick in dein Wissen sowie deine Fähigkeit, selbstständig oder im Team strukturiert zu arbeit'"
+    [projectDuration]="'Dauer:'"
+    [projectDurationInfo]="'5 Wochen'"
+    [projectExampleImg]="'/assets/img/my-projects/backround/Property 1=Join.png'"
+    [projectGitHubBtn]="'https://google.de'"
+  >
+  </app-project-template>
+  <div id="goNext">
     <p>nächstes Projekt</p>
-    <img src="" alt="" />
+    <img
+      src="/assets/img/my-projects/elements/right-arrow.png"
+      alt="image of an arrow"
+    />
   </div>
 </section>
