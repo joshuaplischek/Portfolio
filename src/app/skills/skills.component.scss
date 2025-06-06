@@ -1,12 +1,5 @@
-@keyframes blinkSmooth{
-    0%{
-    opacity: 0;
-    } 50%{
-        opacity: 1;
-    } 100%{
-        opacity: 0;
-    }
-}
+@import "./../../styles.scss";
+@import "./.././animations.scss";
 
 section {
   display: flex;
@@ -34,9 +27,15 @@ section {
   > div {
     top: -150px;
     > div {
+      z-index: 1;
       > h2 {
         font-size: 54px;
       }
+    }
+    > img {
+      position: absolute;
+      top: -10px;
+      left: -10px;
     }
   }
 }
@@ -86,7 +85,9 @@ section {
       left: -50px;
       rotate: 10deg;
       height: 200px;
-      &:hover{ cursor: pointer;}
+      &:hover {
+        cursor: pointer;
+      }
     }
   }
   > img {
@@ -95,6 +96,32 @@ section {
     top: 290px;
     z-index: 1;
     animation: blinkSmooth 2.5s infinite;
-    &:hover{ cursor: pointer;}
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
+
+.circle-reveal {
+  position: relative;
+  width: 300px;
+  height: auto;
+  display: block;
+  transform: translate(-30px, 10px);
+  animation: simpleFade 4s ease-in-out infinite;
+}
+
+@keyframes simpleFade {
+  0% {
+    opacity: 0;
+  }
+  15% {
+    opacity: 1;
+  }
+  65% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
   }
 }
