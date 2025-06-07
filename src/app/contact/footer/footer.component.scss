@@ -1,23 +1,58 @@
 @import "./../../../styles.scss";
-
-footer{
-    width: 100%;
+@import "./../../animations.scss";
+footer {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  > div {
     display: flex;
-    justify-content: space-around;
     align-items: center;
-    >div{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 120px;
-        height: 40px;
-        border-radius: 25px;
-        transition: all ease-in-out 0.3s ;
-        >a{
-            color: white;
-        }
-        &:hover{
-            background-color: $portfolioBlue;
-        }
+    justify-content: center;
+    width: 120px;
+    height: 40px;
+    >img{
+        top: -35px;
+        left: -100px;
     }
+    > a {
+      color: white;
+    }
+    > div {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 120px;
+      height: 40px;
+      border-radius: 25px;
+      transition: all ease-in-out 0.3s;
+      > a {
+        color: white;
+      }
+      &:hover {
+        background-color: $portfolioBlue;
+      }
+    }
+  }
+}
+
+.animate-in {
+  ~ .linkImg {
+    opacity: 1;
+    animation: rotateInShort 1s ease forwards;
+  }
+}
+
+.animate-out {
+
+  ~ .linkImg {
+    animation: rotateOutShort 0.8s ease forwards;
+  }
+}
+
+.fade {
+  ~ .linkImg {
+    transition: all 0.4s ease-in-out;
+    opacity: 0;
+  }
 }

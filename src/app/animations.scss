@@ -36,6 +36,44 @@
   }
 }
 
+@keyframes rotateInShort {
+  0% {
+    left: -70px;
+    rotate: -150deg;
+  }
+  40% {
+    left: -20px;
+    rotate: 20deg;
+  }
+  85% {
+    left: -30px;
+    rotate: 10px;
+  }
+  100% {
+    left: -30px;
+    rotate: 0px;
+  }
+}
+
+@keyframes rotateOutShort {
+  0% {
+    left: -30px;
+    rotate: 0deg;
+  }
+  40% {
+    left: -80px;
+    rotate: -160deg;
+  }
+  85% {
+    left: -70px;
+    rotate: -150px;
+  }
+  100% {
+    left: -70px;
+    rotate: -150deg;
+  }
+}
+
 @keyframes pushButton {
   0% {
     top: 0;

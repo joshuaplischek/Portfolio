@@ -1,6 +1,23 @@
 <footer>
-    <div><a href="">Legal Notice</a></div>
-    <div><a href="">GitHub</a></div>
-    <div><a href="">LinkedIn</a></div>
-    <div><a href="">Email</a></div>
+  <div>
+    <a href="/legal-notice">Legal Notice</a>
+  </div>
+  <div>
+    <div class="git-footer-link fade" #git (mouseenter)="onMouseEnter(git)" (mouseleave)="onMouseLeave(git)">
+      <a href="https://github.com/joshuaplischek" target="_blank">GitHub</a>
+    </div>
+    <img class="linkImg" src="/assets/img/hero/icons/git-icon.png" alt="" />
+  </div>
+  <div>
+    <div class="fade" #LinkedIn (mouseenter)="onMouseEnter(LinkedIn)" (mouseleave)="onMouseLeave(LinkedIn)">
+      <a href="https://www.linkedin.com/in/joshuaplischek/" target="_blank">LinkedIn</a>
+    </div>
+    <img class="linkImg" src="/assets/img/hero/icons/linkedIn-icon.png" alt="" />
+  </div>
+  <div>
+    <div class="fade" #mail (mouseenter)="onMouseEnter(mail)" (mouseleave)="onMouseLeave(mail)">
+        <a href="mailto:plischekjoshua@web.de" target="_blank">Email</a>
+    </div>
+    <img class="linkImg" src="/assets/img/hero/icons/mail-icon.png" alt="" />
+  </div>
 </footer>

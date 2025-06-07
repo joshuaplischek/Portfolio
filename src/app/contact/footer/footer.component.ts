@@ -7,5 +7,15 @@ import { Component } from '@angular/core';
   styleUrl: './footer.component.scss'
 })
 export class FooterComponent {
+    onMouseEnter(element: HTMLElement) {
+    element.classList.remove('animate-out');
+    element.classList.remove('fade');
+    element.classList.add('animate-in');
+  }
 
+  onMouseLeave(element: HTMLElement) {
+    element.classList.remove('animate-in');
+    element.classList.add('fade');
+    element.classList.add('animate-out');
+  }
 }
