@@ -27,20 +27,20 @@
           <img src="assets/img/contact/elements/01_Color option 1- Orange.png" alt="" />
         </div>
         <div>
-          <form action="">
+          <form (ngSubmit)="onSubmit()">
             <div id="nameInput">
               <label for="">What's your Name?</label>
-              <input type="text" placeholder="Your Name goes here" />
+              <input [(ngModel)]="contactData.name" type="text" id="name" name="name" placeholder="Your Name goes here" />
             </div>
 
             <div id="mailInput">
               <label for="">What' your Mail?</label>
-              <input type="email" placeholder="youremail@email.com" />
+              <input [(ngModel)]="contactData.email" type="email" id="email" name="email" placeholder="youremail@email.com" />
             </div>
 
             <div id="textInput">
               <label for="">How can I help you?</label>
-              <input type="text" placeholder="Hey Josh, Im interested in..." />
+              <input [(ngModel)]="contactData.message" type="text" id="message" name="message" placeholder="Hey Josh, Im interested in..." />
             </div>
           </form>
 
@@ -53,7 +53,7 @@
           </div>
         </div>
         <div class="send">
-          <button>Send</button>
+          <button  #button (mouseenter)="onMouseEnterBtn(button)" (mouseleave)="onMouseLeaveBtn(button)">Send</button>
         </div>
       </div>
     </div>

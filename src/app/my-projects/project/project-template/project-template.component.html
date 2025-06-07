@@ -37,15 +37,17 @@
       <img src="{{ projectInfoImg }}" alt="" />
     </div>
     <div class="link-btns">
-      <button
+      <button #btnGit
         class="link-to-git-hub"
         (click)="window.open(projectGitHubBtn, '_blank')"
+        (mouseenter)="onMouseEnterBtn(btnGit)" (mouseleave)="onMouseLeaveBtn(btnGit)"
       >
         GitHub
       </button>
-      <button
+      <button #btnLiveTest
         class="link-to-live-test"
         (click)="window.open(projectLiveTestBtn, '_blank')"
+        (mouseenter)="onMouseEnterBtn(btnLiveTest)" (mouseleave)="onMouseLeaveBtn(btnLiveTest)"
       >
         Live Test
       </button>

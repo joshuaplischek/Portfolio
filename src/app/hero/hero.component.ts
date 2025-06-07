@@ -9,7 +9,6 @@ import { HeaderComponent } from '../header/header.component';
   styleUrl: './hero.component.scss',
 })
 export class HeroComponent {
-  
   onMouseEnter(element: HTMLElement) {
     element.classList.remove('animate-out');
     element.classList.remove('fade');
@@ -20,5 +19,15 @@ export class HeroComponent {
     element.classList.remove('animate-in');
     element.classList.add('fade');
     element.classList.add('animate-out');
+  }
+
+  onMouseEnterBtn(element: HTMLElement) {
+    element.classList.remove('animate-dont-push');
+    element.classList.add('animate-push');
+  }
+
+  onMouseLeaveBtn(element: HTMLElement) {
+    element.classList.remove('animate-push');
+    element.classList.add('animate-dont-push');
   }
 }

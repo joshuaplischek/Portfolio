@@ -54,7 +54,20 @@
 }
 
 @keyframes dontPushButtonAnymore {
-  
+  0% {
+    top: 2px;
+    left: 2px;
+    background-color: $portfolioOrange;
+    box-shadow: none;
+  }
+  50% {
+    top: 1px;
+    left: 1px;
+  }
+  100% {
+    top: 0;
+    left: 0;
+  }
 }
 
 @keyframes slideOut {

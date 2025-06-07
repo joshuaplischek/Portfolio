@@ -27,4 +27,14 @@ export class ProjectTemplateComponent {
   @Input() projectGitHubBtn: string = '';
   @Input() projectLiveTestBtn: string = '';
   @Input() technologies: Technology[] = [];
+
+  onMouseEnterBtn(element: HTMLElement) {
+    element.classList.remove('animate-dont-push');
+    element.classList.add('animate-push');
+  }
+
+  onMouseLeaveBtn(element: HTMLElement) {
+    element.classList.remove('animate-push');
+    element.classList.add('animate-dont-push');
+  }
 }

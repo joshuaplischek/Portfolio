@@ -38,7 +38,7 @@
             </div>
         </div>
         <div id="getInTouch">
-            <button>Get in Touch</button>
+            <button #button (mouseenter)="onMouseEnterBtn(button)" (mouseleave)="onMouseLeaveBtn(button)">Get in Touch</button>
         </div>
     </div>
     <div class="hero-links-bar">

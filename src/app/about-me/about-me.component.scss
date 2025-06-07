@@ -46,9 +46,16 @@ section {
     box-shadow: 2px 2px 1px 1px rgb(0, 0, 0);
     &:hover{
       cursor: pointer;
-      animation: pushButton 0.1s ease-out forwards;
     }
   }
+}
+
+.animate-dont-push{
+  animation: dontPushButtonAnymore 0.1s ease forwards;
+}
+
+.animate-push{
+  animation: pushButton 0.1s ease forwards;
 }
 
 .ripped-paper-skills {
