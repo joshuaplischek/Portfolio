@@ -32,6 +32,7 @@
             <div id="nameInput" class="border inputs">
               <label for="">What's your Name?</label>
               <input
+                #name="ngModel"
                 [(ngModel)]="contactData.name"
                 type="text"
                 id="name"
@@ -39,11 +40,17 @@
                 placeholder="Your Name goes here"
                 required
               />
+              @if (name.invalid && name.touched) {
+              <div class="error-message">
+                <p>Bitte geben Sie einen gültigen Namen ein</p>
+              </div>
+              }
             </div>
 
             <div id="mailInput" class="border inputs">
               <label for="">What' your Mail?</label>
               <input
+                #email="ngModel"
                 [(ngModel)]="contactData.email"
                 type="email"
                 id="email"
@@ -52,6 +59,11 @@
                 required
                 pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}"
               />
+              @if (email.invalid && email.touched) {
+              <div class="error-message">
+                <p>Bitte geben Sie eine gültige Email ein</p>
+              </div>
+              }
             </div>
 
             <div id="textInput" class="border text-message-div inputs">
@@ -69,7 +81,13 @@
               @if (!message.valid && message.touched) { }
             </div>
             <div class="privacy-policy">
-              <input type="checkbox" />
+              <input
+                type="checkbox"
+                required
+                #privacy="ngModel"
+                [(ngModel)]="contactData.privacyAccepted"
+                name="privacy"
+              />
               <p>
                 I've read the <a href="">privacy policy</a> and agree to the
                 processing of my data as outlined.
@@ -80,6 +98,7 @@
                 #button
                 type="submit"
                 value="submit"
+                [disabled]="!contactForm.valid || isSubmitting"
                 (mouseenter)="onMouseEnterBtn(button)"
                 (mouseleave)="onMouseLeaveBtn(button)"
               >
