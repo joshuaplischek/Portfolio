@@ -15,48 +15,78 @@
         <img src="" alt="" />
       </div>
       <div class="site-owner">
-        <a href="#hero"
-          ><img src="/assets/img/logo/logo_blue.png" alt=""
-        /></a>
+        <a href="#hero"><img src="/assets/img/logo/logo_blue.png" alt="" /></a>
         <p>© Joshua Plischek 2025</p>
       </div>
     </div>
     <div class="contact-container">
       <div>
         <div class="logoSticker">
-          <img src="assets/img/contact/elements/01_Color option 1- Orange.png" alt="" />
+          <img
+            src="assets/img/contact/elements/01_Color option 1- Orange.png"
+            alt=""
+          />
         </div>
         <div>
           <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
-            <div id="nameInput">
+            <div id="nameInput" class="border inputs">
               <label for="">What's your Name?</label>
-              <input [(ngModel)]="contactData.name" type="text" id="name" name="name" placeholder="Your Name goes here" required/>
+              <input
+                [(ngModel)]="contactData.name"
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Your Name goes here"
+                required
+              />
             </div>
 
-            <div id="mailInput">
+            <div id="mailInput" class="border inputs">
               <label for="">What' your Mail?</label>
-              <input [(ngModel)]="contactData.email" type="email" id="email" name="email" placeholder="youremail@email.com" required pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}"/>
+              <input
+                [(ngModel)]="contactData.email"
+                type="email"
+                id="email"
+                name="email"
+                placeholder="youremail@email.com"
+                required
+                pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}"
+              />
             </div>
 
-            <div id="textInput">
+            <div id="textInput" class="border text-message-div inputs">
               <label for="">How can I help you?</label>
-              <textarea #message="ngModel" minlength="4" [(ngModel)]="contactData.message" type="text" id="message" name="message" placeholder="Hey Josh, Im interested in..." required></textarea>
-              @if (!message.valid && message.touched) {
-
-              }
+              <textarea
+                #message="ngModel"
+                minlength="4"
+                [(ngModel)]="contactData.message"
+                type="text"
+                id="message"
+                name="message"
+                placeholder="Hey Josh, Im interested in..."
+                required
+              ></textarea>
+              @if (!message.valid && message.touched) { }
+            </div>
+            <div class="privacy-policy">
+              <input type="checkbox" />
+              <p>
+                I've read the <a href="">privacy policy</a> and agree to the
+                processing of my data as outlined.
+              </p>
+            </div>
+            <div class="send">
+              <button
+                #button
+                type="submit"
+                value="submit"
+                (mouseenter)="onMouseEnterBtn(button)"
+                (mouseleave)="onMouseLeaveBtn(button)"
+              >
+                Send
+              </button>
             </div>
           </form>
-
-          <div class="privacy-policy">
-            <input type="checkbox" />
-            <p>
-              I've read the <a href="">privacy policy</a> and agree to the
-              processing of my data as outlined.
-            </p>
-          </div>
-        </div>
-        <div class="send">
-          <button  #button (mouseenter)="onMouseEnterBtn(button)" (mouseleave)="onMouseLeaveBtn(button)">Send</button>
         </div>
       </div>
     </div>
