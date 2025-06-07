@@ -27,20 +27,23 @@
           <img src="assets/img/contact/elements/01_Color option 1- Orange.png" alt="" />
         </div>
         <div>
-          <form (ngSubmit)="onSubmit()">
+          <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
             <div id="nameInput">
               <label for="">What's your Name?</label>
-              <input [(ngModel)]="contactData.name" type="text" id="name" name="name" placeholder="Your Name goes here" />
+              <input [(ngModel)]="contactData.name" type="text" id="name" name="name" placeholder="Your Name goes here" required/>
             </div>
 
             <div id="mailInput">
               <label for="">What' your Mail?</label>
-              <input [(ngModel)]="contactData.email" type="email" id="email" name="email" placeholder="youremail@email.com" />
+              <input [(ngModel)]="contactData.email" type="email" id="email" name="email" placeholder="youremail@email.com" required pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}"/>
             </div>
 
             <div id="textInput">
               <label for="">How can I help you?</label>
-              <input [(ngModel)]="contactData.message" type="text" id="message" name="message" placeholder="Hey Josh, Im interested in..." />
+              <textarea #message="ngModel" minlength="4" [(ngModel)]="contactData.message" type="text" id="message" name="message" placeholder="Hey Josh, Im interested in..." required></textarea>
+              @if (!message.valid && message.touched) {
+
+              }
             </div>
           </form>
 

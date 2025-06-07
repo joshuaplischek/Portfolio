@@ -1,33 +1,62 @@
-import { Component } from '@angular/core';
-import { FooterComponent } from "./footer/footer.component";
-import { FormsModule } from '@angular/forms';
+import { Component, inject } from '@angular/core';
+import { FooterComponent } from './footer/footer.component';
+import { FormsModule, NgForm } from '@angular/forms';
 import { CommonModule } from '@angular/common';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-contact',
   imports: [FooterComponent, FormsModule, CommonModule],
   templateUrl: './contact.component.html',
-  styleUrl: './contact.component.scss'
+  styleUrl: './contact.component.scss',
 })
 export class ContactComponent {
-    onMouseEnterBtn(element: HTMLElement) {
+  http = inject(HttpClient);
+
+  onMouseEnterBtn(element: HTMLElement) {
     element.classList.remove('animate-dont-push');
     element.classList.add('animate-push');
-  }
+  };
 
   onMouseLeaveBtn(element: HTMLElement) {
     element.classList.remove('animate-push');
     element.classList.add('animate-dont-push');
-  }
+  };
 
   contactData = {
-    name: "",
-    email: "",
-    message: "",
-  }
+    name: '',
+    email: '',
+    message: '',
+  };
 
-  onSubmit(){
-    console.log(this.contactData);
-    
+  mailTest = true;
+
+  post = {
+    endPoint: 'https://deineDomain.de/sendMail.php',
+    body: (payload: any) => JSON.stringify(payload),
+    options: {
+      headers: {
+        'Content-Type': 'text/plain',
+        responseType: 'text',
+      },
+    },
+  };
+
+  onSubmit(ngForm: NgForm) {
+    if (ngForm.submitted && ngForm.form.valid && !this.mailTest) {
+      this.http
+        .post(this.post.endPoint, this.post.body(this.contactData))
+        .subscribe({
+          next: (response) => {
+            ngForm.resetForm();
+          },
+          error: (error) => {
+            console.error(error);
+          },
+          complete: () => console.info('send post complete'),
+        });
+    } else if (ngForm.submitted && ngForm.form.valid && this.mailTest) {
+      ngForm.resetForm();
+    }
   }
 }
