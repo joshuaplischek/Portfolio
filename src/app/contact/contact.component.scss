@@ -172,10 +172,10 @@ form {
 }
 
 .error-message {
-  color: #FF4444;
+  color: #ff4444;
   font-size: 12px;
   margin-top: 4px;
-  
+
   p {
     margin: 0;
     padding: 0;
@@ -184,12 +184,21 @@ form {
 
 .inputs {
   &.ng-invalid.ng-touched {
-    border-color: #FF4444;
+    border-color: #ff4444;
   }
 }
 
 .privacy-policy {
   .error-message {
-    margin-left: 24px;  // Einrückung für Checkbox-Fehlermeldung
+    margin-left: 24px;
   }
+}
+
+.arrow {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  mask: linear-gradient(to right, black 50%, transparent 50%);
+  mask-size: 200% 100%;
+  animation: drawAnimation 4s infinite;
 }
