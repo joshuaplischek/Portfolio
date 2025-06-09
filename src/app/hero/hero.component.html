@@ -1,56 +1,93 @@
 <section id="hero">
   <app-header></app-header>
-    <div class="hero-title-content">
-        <div id="helloWorld">
-            <div #helloWorldElement class="helloWorldText fade" (mouseenter)="onMouseEnter(helloWorldElement)" (mouseleave)="onMouseLeave(helloWorldElement)">
-                <p>Hello world</p>
-                <p id="myNameIs">I'M JOSHUA PLISCHEK</p>
-            </div>
-                <img class="helloImage" src="/assets/img/hero/icons/hello-icon.png" alt="hello icon">
-        </div> 
-        <div id="frontEndImageContainer">
-            <div class="animated-text">
-                <div class="upper">F</div>
-                <div class="lower">r</div>
-                <div class="lower">o</div>
-                <div class="lower">n</div>
-                <div class="lower">t</div>
-                <div class="lower">e</div>
-                <div class="lower">n</div>
-                <div class="lower">d</div>
-            </div>
-        <div id="photoCard"> 
-            <img src="/assets/img/hero/elements/josh_in_polaroid.png" alt="picture of Joshua Plischek">
-            <p>Josh :) </p>
-        </div>
-        </div>
-        <div id="developer">
-            <div class="animated-text">
-                <div class="upper">D</div>
-                <div class="upper">E</div>
-                <div class="upper">V</div>
-                <div class="upper">E</div>
-                <div class="upper">L</div>
-                <div class="upper">O</div>
-                <div class="upper">P</div>
-                <div class="upper">E</div>
-                <div class="upper">R</div>
-            </div>
-        </div>
-        <div id="getInTouch">
-            <button #button (mouseenter)="onMouseEnterBtn(button)" (mouseleave)="onMouseLeaveBtn(button)">Get in Touch</button>
-        </div>
+  <div class="hero-title-content">
+    <div id="helloWorld">
+      <div
+        #helloWorldElement
+        class="helloWorldText fade"
+        (mouseenter)="onMouseEnter(helloWorldElement)"
+        (mouseleave)="onMouseLeave(helloWorldElement)"
+      >
+        <p>Hello world</p>
+        <p id="myNameIs">I'M JOSHUA PLISCHEK</p>
+      </div>
+      <img
+        class="helloImage"
+        src="/assets/img/hero/icons/hello-icon.png"
+        alt="hello icon"
+      />
     </div>
-    <div class="hero-links-bar">
-        <div class="contact-links">
-            <div><a href="https://www.linkedin.com/in/joshuaplischek/" target="_blank"><img src="/assets/img/hero/icons/linkedIn-icon.png" alt=""></a></div>
-            <div><a href="https://github.com/joshuaplischek" target="_blank"><img src="/assets/img/hero/icons/git-icon.png" alt=""></a></div>
-            <div><a href="mailto:plischekjoshua@web.de" target="_blank"><img src="/assets/img/hero/icons/mail-icon.png" alt=""></a></div>
-        </div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
+    <div id="frontEndImageContainer">
+      <div class="animated-text">
+        <div class="upper">F</div>
+        <div class="lower">r</div>
+        <div class="lower">o</div>
+        <div class="lower">n</div>
+        <div class="lower">t</div>
+        <div class="lower">e</div>
+        <div class="lower">n</div>
+        <div class="lower">d</div>
+      </div>
+      <div id="photoCard">
+        <img
+          src="/assets/img/hero/elements/josh_in_polaroid.png"
+          alt="picture of Joshua Plischek"
+        />
+        <p>Josh :)</p>
+      </div>
     </div>
+    <div id="developer">
+      <div class="animated-text">
+        <div class="upper">D</div>
+        <div class="upper">E</div>
+        <div class="upper">V</div>
+        <div class="upper">E</div>
+        <div class="upper">L</div>
+        <div class="upper">O</div>
+        <div class="upper">P</div>
+        <div class="upper">E</div>
+        <div class="upper">R</div>
+      </div>
+    </div>
+    <div id="getInTouch">
+      <button
+        #button
+        (mouseenter)="onMouseEnterBtn(button)"
+        (mouseleave)="onMouseLeaveBtn(button)"
+      >
+        Get in Touch
+      </button>
+    </div>
+  </div>
+  <div class="hero-links-bar">
+    <div class="contact-links">
+      <div>
+        <a href="https://www.linkedin.com/in/joshuaplischek/" target="_blank"
+          ><img src="/assets/img/hero/icons/linkedIn-icon.png" alt=""
+        /></a>
+      </div>
+      <div>
+        <a href="https://github.com/joshuaplischek" target="_blank"
+          ><img src="/assets/img/hero/icons/git-icon.png" alt=""
+        /></a>
+      </div>
+      <div>
+        <a href="mailto:plischekjoshua@web.de" target="_blank"
+          ><img src="/assets/img/hero/icons/mail-icon.png" alt=""
+        /></a>
+      </div>
+    </div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+  <div class="photoCard-mobile">
+    <img
+      src="/assets/img/hero/elements/josh_in_polaroid.png"
+      alt="picture of Joshua Plischek"
+    />
+    <p>Josh :)</p>
+  </div>
 </section>

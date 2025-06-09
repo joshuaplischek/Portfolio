@@ -14,8 +14,10 @@
     flex-direction: column;
     width: 100%;
     height: 700px;
-    #helloWorld {
+    > div {
       width: 900px;
+    }
+    #helloWorld {
       height: 50px;
 
       .helloImage {
@@ -35,52 +37,9 @@
         }
       }
     }
-    #frontEndImageContainer {
-      display: flex;
-      width: 900px;
-      justify-content: space-between;
-      > p {
-        font-size: 140px;
-        font-weight: bold;
-      }
-      > #photoCard {
-        rotate: 10deg;
-        height: 240px;
-        width: 200px;
-        position: absolute;
-        top: -80px;
-        right: 25px;
-        background-color: white;
-        color: black;
-        > img {
-          height: 240px;
-          width: auto;
-          filter: grayscale(1);
 
-          &:hover {
-            animation: 0.3s photoLightning ease forwards;
-          }
-        }
-        > p {
-          top: -45px;
-          left: 75px;
-          width: 80px;
-          z-index: 1;
-          font-family: "secondaryFont";
-          font-size: 20px;
-          cursor: default;
-        }
-      }
-    }
-    #developer {
-      width: 900px;
-      text-align: end;
-      font-size: 140px;
-      font-weight: bold;
-    }
     #getInTouch {
       text-align: end;
-      width: 900px;
       > button {
         color: white;
         font-size: 16px;
@@ -98,11 +57,17 @@
   }
 }
 
-.animate-dont-push{
+#developer {
+  text-align: end;
+  font-size: 140px;
+  font-weight: bold;
+}
+
+.animate-dont-push {
   animation: dontPushButtonAnymore 0.1s ease forwards;
 }
 
-.animate-push{
+.animate-push {
   animation: pushButton 0.1s ease forwards;
 }
 
@@ -114,28 +79,91 @@
   > div {
     width: 57.67px;
   }
-  > .contact-links {
-    bottom: 160px;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+}
 
-    > div {
-      @include flexCenterAll;
-      height: 40px;
-      width: 40px;
-      border: solid 1px white;
-      border-radius: 100%;
-      transition: 0.5s ease;
-      &:hover {
-        background-color: $portfolioBlue;
-      }
-      >a{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
+.contact-links {
+  bottom: 160px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  > div {
+    @include flexCenterAll;
+    height: 40px;
+    width: 40px;
+    border: solid 1px white;
+    border-radius: 100%;
+    transition: 0.5s ease;
+    &:hover {
+      background-color: $portfolioBlue;
     }
+    > a {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}
+
+.photoCard-mobile {
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  top: -130px;
+  color: black;
+  display: none;
+  rotate: 10deg;
+  > img {
+    height: 240px;
+    width: auto;
+  }
+  > p {
+    top: -45px;
+    left: 10px;
+    width: 80px;
+    font-weight: bold;
+    z-index: 1;
+    font-family: "secondaryFont";
+    font-size: 20px;
+    cursor: default;
+  }
+}
+
+#frontEndImageContainer {
+  display: flex;
+  justify-content: space-between;
+  > p {
+    font-size: 140px;
+    font-weight: bold;
+  }
+}
+#photoCard {
+  rotate: 10deg;
+  height: 240px;
+  width: 200px;
+  position: absolute;
+  top: -80px;
+  right: 25px;
+  background-color: white;
+  color: black;
+  > img {
+    height: 240px;
+    width: auto;
+    filter: grayscale(1);
+
+    &:hover {
+      animation: 0.3s photoLightning ease forwards;
+    }
+  }
+  > p {
+    top: -45px;
+    left: 75px;
+    width: 80px;
+    z-index: 1;
+    font-family: "secondaryFont";
+    font-size: 20px;
+    cursor: default;
   }
 }
 
@@ -186,11 +214,97 @@
 }
 
 .fade {
-
   ~ .helloImage {
     opacity: 0;
   }
   #myNameIs {
     opacity: 0;
+  }
+}
+
+@media (max-width: 1000px) {
+  // burger menu
+}
+
+@media (max-width: 950px) {
+  #hero {
+    padding: 0 25px;
+    .hero-title-content {
+      > div {
+        width: 700px;
+      }
+    }
+  }
+  #frontEndImageContainer {
+    > div {
+      font-size: 100px;
+      font-weight: bold;
+    }
+    > #photoCard {
+      top: -120px;
+      > p {
+        top: -65px;
+      }
+    }
+  }
+  #developer {
+    > div {
+      font-size: 100px;
+    }
+  }
+}
+
+@media (max-width: 720px) {
+  #hero {
+    .hero-title-content {
+      > div {
+        width: 100%;
+      }
+    }
+  }
+
+  #frontEndImageContainer{
+    justify-content: center;
+  }
+  #developer {
+    text-align: center;
+  }
+
+  #photoCard {
+    display: none;
+  }
+  .photoCard-mobile {
+    display: flex;
+  }
+
+  .contact-links {
+    display: none;
+  }
+}
+
+@media (max-width: 610px) {
+  #developer {
+    > div {
+      font-size: 70px;
+    }
+  }
+  #frontEndImageContainer {
+    > div {
+      font-size: 70px;
+      font-weight: bold;
+    }
+  }
+}
+
+@media (max-width: 450px){
+    #developer {
+    > div {
+      font-size: 45px;
+    }
+  }
+  #frontEndImageContainer {
+    > div {
+      font-size: 45px;
+    }
   }
 }
