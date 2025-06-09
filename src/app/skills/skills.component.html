@@ -13,10 +13,12 @@
   <div class="skills-description-container">
     <div class="skills-description">
       <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum debitis
-        ipsam velit, blanditiis tenetur recusandae amet nesciunt qui nam optio,
-        iusto aspernatur ipsa maiores voluptatem. Deserunt provident iusto quam
-        eum.
+        Momentan arbeite ich vor allem mit HTML, CSS/SCSS, JavaScript,
+        TypeScript und Angular – alles, was man für moderne Webentwicklung
+        braucht. Java und Python interessieren mich ebenfalls sehr, und ich
+        möchte beide künftig gezielt vertiefen und in Projekten einsetzen. Mich
+        interessiert nicht nur, was im Browser läuft – auch Desktop-Apps und
+        andere Softwareprojekte reizen mich sehr.
       </p>
     </div>
     <div class="skill-icons">
@@ -67,12 +69,19 @@
     <div>
       <img
         [src]="
-          isDefaultImage? '/assets/img/skills/elements/Default.png': '/assets/img/skills/elements/Final.png'"
+          isDefaultImage
+            ? '/assets/img/skills/elements/Default.png'
+            : '/assets/img/skills/elements/Final.png'
+        "
         (click)="toggleImage(pullToPeel, interested)"
         alt=""
       />
     </div>
-    <div #interested class="also-intrested" (click)="toggleImage(pullToPeel, interested)">
+    <div
+      #interested
+      class="also-intrested"
+      (click)="toggleImage(pullToPeel, interested)"
+    >
       <p>Außerdem bin ich an folgenden Sprachen intressiert:</p>
       <div class="peel-off-icons">
         <div>
