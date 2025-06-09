@@ -4,6 +4,7 @@
 section {
   height: 700px;
   @include flexCenterAll;
+  gap: 50px;
   > div {
     display: flex;
     flex-direction: column;
@@ -15,7 +16,7 @@ section {
       > h2 {
         font-size: 54px;
       }
-      >img{
+      > img {
         height: auto;
         width: 300px;
       }
@@ -44,35 +45,51 @@ section {
     background-color: rgba(255, 255, 255, 0);
     border-radius: 25px;
     box-shadow: 2px 2px 1px 1px rgb(0, 0, 0);
-    &:hover{
+    &:hover {
+      color: white;
       cursor: pointer;
     }
   }
 }
 
-.animate-dont-push{
+.animate-dont-push {
   animation: dontPushButtonAnymore 0.1s ease forwards;
 }
 
-.animate-push{
+.animate-push {
   animation: pushButton 0.1s ease forwards;
 }
 
 .ripped-paper-skills {
   @include flexCenterAll;
   flex-direction: column;
-  > img {
-    width: 550px;
+  > div {
+    > div {
+      @include flexCenterAll;
+      top: -110px;
+      gap: 10px;
+      color: white;
+      font-size: 22px;
+      > p {
+        font-family: "secondaryFont";
+      }
+    }
+    > img {
+      width: 550px;
+    }
   }
   > .yellow-paper {
     z-index: 1;
-    top: 50px;
+    top: 90px;
     rotate: -5deg;
   }
 
   > .orange-paper {
     z-index: -1;
-    bottom: 40px;
+    bottom: 110px;
     rotate: 2deg;
+    > div {
+      rotate: 2deg;
+    }
   }
 }

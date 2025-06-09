@@ -3,10 +3,14 @@
     <div>
       <div><p>MY STACK</p></div>
       <div><h2>Skill set</h2></div>
-      <img class="circle-reveal" src="/assets/img/skills/underlines/Property 1=linea copia 4.png" alt="">
+      <img
+        class="circle-reveal"
+        src="/assets/img/skills/underlines/Property 1=linea copia 4.png"
+        alt=""
+      />
     </div>
   </div>
-  <div>
+  <div class="skills-description-container">
     <div class="skills-description">
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum debitis
@@ -53,7 +57,43 @@
     </div>
   </div>
   <div class="peel-off">
-    <img src="/assets/img/skills/elements/pull-to-peel-text.png" alt="">
-    <div><img src="/assets/img/skills/elements/Default.png" alt="" /></div>
+    <img
+      #pullToPeel
+      class="pull-to-peel pull-to-peel-animation"
+      (click)="toggleImage(pullToPeel, interested)"
+      src="/assets/img/skills/elements/pull-to-peel-text.png"
+      alt=""
+    />
+    <div>
+      <img
+        [src]="
+          isDefaultImage? '/assets/img/skills/elements/Default.png': '/assets/img/skills/elements/Final.png'"
+        (click)="toggleImage(pullToPeel, interested)"
+        alt=""
+      />
+    </div>
+    <div #interested class="also-intrested" (click)="toggleImage(pullToPeel, interested)">
+      <p>Außerdem bin ich an folgenden Sprachen intressiert:</p>
+      <div class="peel-off-icons">
+        <div>
+          <img
+            #javaSkill
+            class="java-icon"
+            src="/assets/img/skills/icons/java.png"
+            alt="java icon"
+          />
+          <p>Java</p>
+        </div>
+        <div>
+          <img
+            #pythonSkill
+            class="python-icon"
+            src="/assets/img/skills/icons/Python.png"
+            alt="python icon"
+          />
+          <p>Python</p>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
