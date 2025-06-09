@@ -12,19 +12,7 @@ header {
       color: white;
     }
   }
-  > .languageSwitch {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-evenly;
-    width: 120px;
-    color: white;
-    >div{
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-  }
+
   > img {
     width: 50px;
     height: 50px;
@@ -36,10 +24,24 @@ header {
   }
 }
 
+.languageSwitch {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 120px;
+  color: white;
+  > div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
 .about-me {
   display: flex;
   flex-direction: column;
-  .about-me-underline{
+  .about-me-underline {
     opacity: 0;
     transition: ease-in-out 0.3s all;
     position: absolute;
@@ -116,6 +118,104 @@ header {
   }
 }
 
+.burger-menu-button {
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.visuallyHidden {
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+}
+
+h1 {
+  text-align: center;
+}
+
+.container {
+  width: 70%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.hamburger {
+  margin: 0 auto;
+  margin-top: 30px;
+  width: 30px;
+  height: 30px;
+  position: relative;
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.hamburger .bar {
+  padding: 0;
+  width: 30px;
+  height: 4px;
+  background-color: $portfolioBlue;
+  display: block;
+  border-radius: 4px;
+  transition: all 0.4s ease-in-out;
+  position: absolute;
+}
+
+.bar1 {
+  top: -12px;
+}
+
+.bar2,
+.bar3 {
+  top: 0.5px;
+}
+
+.bar3 {
+  right: 0;
+}
+
+.bar4 {
+  bottom: 12px;
+}
+
+.hamburger3 .bar1 {
+  transform-origin: 5%;
+}
+
+.hamburger3 .bar4 {
+  transform-origin: 5%;
+}
+
+.checkbox3:checked + label > .hamburger3 > .bar1 {
+  transform: rotate(45deg);
+  height: 3px;
+  width: 42px;
+}
+
+.checkbox3:checked + label > .hamburger3 > .bar3 {
+  transform: rotate(45deg);
+  height: 3px;
+  background-color: transparent;
+}
+
+.checkbox3:checked + label > .hamburger3 > .bar2 {
+  transform: rotate(-45deg);
+  height: 3px;
+  background-color: transparent;
+}
+
+.checkbox3:checked + label > .hamburger3 > .bar4 {
+  transform: rotate(-45deg);
+  height: 3px;
+  width: 42px;
+}
 .switch {
   position: relative;
   height: 1rem;
@@ -125,7 +225,7 @@ header {
   -webkit-appearance: none;
   border-radius: 9999px;
   background-color: rgba(100, 116, 139, 0.377);
-  transition: all .3s ease;
+  transition: all 0.3s ease;
 }
 
 .switch:checked {
@@ -145,18 +245,34 @@ header {
   border-radius: 9999px;
   background-color: $portfolioBlue;
   box-shadow: 0 3px 10px rgba(100, 116, 139, 0.327);
-  transition: all .3s ease;
+  transition: all 0.3s ease;
 }
 
 .switch:hover::before {
-  box-shadow: 0 0 0px 8px rgba(0, 0, 0, .15)
+  box-shadow: 0 0 0px 8px rgba(0, 0, 0, 0.15);
 }
 
 .switch:checked:hover::before {
-  box-shadow: 0 0 0px 8px rgba(72, 116, 236, 0.15)
+  box-shadow: 0 0 0px 8px rgba(72, 116, 236, 0.15);
 }
 
 .switch:checked:before {
   transform: translateX(100%);
   border-color: $portfolioBlue;
+}
+
+@media (max-width: 920px) {
+  header{
+    justify-content: space-between;
+  }
+  .about-me,
+  .skills,
+  .contact,
+  .projects,
+  .languageSwitch {
+    display: none;
+  }
+  .burger-menu-button {
+    display: flex;
+  }
 }
