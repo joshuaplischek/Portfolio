@@ -23,7 +23,8 @@
     <p>EN</p>
   </div>
   <div class="burger-menu-button">
-    <input type="checkbox" id="checkbox3" class="checkbox3 visuallyHidden">
+    <input type="checkbox" id="checkbox3" class="checkbox3 visuallyHidden" [checked]="isMenuOpen"
+         (change)="onMenuToggle()">
         <label for="checkbox3">
             <div class="hamburger hamburger3">
                 <span class="bar bar1"></span>

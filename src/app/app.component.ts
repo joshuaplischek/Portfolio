@@ -1,13 +1,19 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { HeroComponent } from "./hero/hero.component";
+import { HeroComponent } from './hero/hero.component';
 
 @Component({
   selector: 'app-root',
   imports: [RouterOutlet],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.scss'
+  styleUrl: './app.component.scss',
 })
 export class AppComponent {
   title = 'Portfolio';
+
+  menuOpen = false;
+
+  onToggleMenu(isOpen: boolean) {
+    this.menuOpen = isOpen;
+  }
 }

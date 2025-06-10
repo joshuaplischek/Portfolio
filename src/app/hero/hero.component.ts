@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
 import { HeaderComponent } from '../header/header.component';
+import { BurgerMenuComponent } from '../burger-menu/burger-menu.component';
 
 @Component({
   selector: 'app-hero',
   standalone: true,
-  imports: [HeaderComponent],
+  imports: [HeaderComponent, BurgerMenuComponent],
   templateUrl: './hero.component.html',
   styleUrl: './hero.component.scss',
 })
@@ -29,5 +30,12 @@ export class HeroComponent {
   onMouseLeaveBtn(element: HTMLElement) {
     element.classList.remove('animate-push');
     element.classList.add('animate-dont-push');
+  }
+
+  menuOpen = false;
+
+  onToggleMenu(isOpen: boolean) {
+    this.menuOpen = !this.menuOpen; 
+    console.log('Menu state:', this.menuOpen);
   }
 }

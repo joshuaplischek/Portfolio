@@ -1,14 +1,14 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'app-header',
   standalone: true,
   imports: [],
   templateUrl: './header.component.html',
-  styleUrl: './header.component.scss'
+  styleUrl: './header.component.scss',
 })
 export class HeaderComponent {
-    isEnglish = false;
+  isEnglish = false;
 
   onLanguageChange(event: Event) {
     const checkbox = event.target as HTMLInputElement;
@@ -29,5 +29,13 @@ export class HeaderComponent {
     this.isEnglish = false;
     // Hier Logik für Deutsch einfügen
     console.log('Sprache auf Deutsch gesetzt');
+  }
+
+  isMenuOpen = false;
+  @Output() toggleMenu = new EventEmitter<boolean>();
+
+  onMenuToggle() {
+    this.isMenuOpen = !this.isMenuOpen;
+    this.toggleMenu.emit(this.isMenuOpen);
   }
 }

@@ -1,0 +1,48 @@
+section {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  background-image: url("/assets/img/hero/backround/ripped-paper.png");
+  background-position: bottom;
+  background-size: cover;
+}
+
+a {
+  color: white;
+}
+
+.burger-menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 600px;
+  color: white;
+}
+
+.languageSwitch{
+    display: flex;
+    
+}
+
+.contact-links {
+  display: flex;
+  gap: 10px;
+  > div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    width: 40px;
+    border: 1px solid white;
+    border-radius: 100%;
+    a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+}
