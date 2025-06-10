@@ -3,6 +3,7 @@
 
 section {
   height: 700px;
+  padding: 0 20px;
   @include flexCenterAll;
   gap: 50px;
   > div {
@@ -16,15 +17,13 @@ section {
       > h2 {
         font-size: 54px;
       }
-      > img {
-        height: auto;
-        width: 300px;
-      }
     }
   }
 }
 
 .drawing-line {
+  height: auto;
+  width: 300px;
   position: relative;
   mask: linear-gradient(to right, black 50%, transparent 50%);
   mask-size: 200% 100%;
@@ -45,6 +44,7 @@ section {
     background-color: rgba(255, 255, 255, 0);
     border-radius: 25px;
     box-shadow: 2px 2px 1px 1px rgb(0, 0, 0);
+    z-index: 1;
     &:hover {
       color: white;
       cursor: pointer;
@@ -64,6 +64,8 @@ section {
   @include flexCenterAll;
   flex-direction: column;
   > div {
+    @include flexCenterAll;
+    flex-direction: column;
     > div {
       @include flexCenterAll;
       top: -110px;
@@ -91,5 +93,81 @@ section {
     > div {
       rotate: 2deg;
     }
+  }
+}
+
+@media (max-width: 1000px) {
+  section {
+    flex-direction: column-reverse;
+    height: auto;
+    gap: 0;
+    > div {
+      width: 100%;
+    }
+  }
+}
+
+@media (max-width: 580px) {
+  section {
+    height: auto;
+  }
+  .ripped-paper-skills {
+    height: 400px;
+    > div {
+      > img {
+        height: 150px;
+        width: 400px;
+      }
+      > div {
+        top: -100px;
+      }
+
+      > .yellow-paper-content {
+        width: 300px;
+        top: -120px;
+      }
+      > .orange-paper-content {
+        width: 300px;
+        top: -120px;
+      }
+    }
+    > .yellow-paper {
+      top: 120px;
+    }
+  }
+}
+
+@media (max-width: 440px) {
+  section {
+    height: auto;
+  }
+  .ripped-paper-skills {
+    height: 400px;
+    > div {
+      > img {
+        height: 150px;
+        width: 280px;
+      }
+      > div {
+        width: 240px;
+        font-size: 16px;
+        top: -100px;
+      }
+
+      > .yellow-paper-content {
+        width: 200px;
+        top: -120px;
+      }
+      > .orange-paper-content {
+        width: 200px;
+        top: -100px;
+      }
+    }
+    > .yellow-paper {
+      top: 120px;
+    }
+  }
+  .drawing-line {
+    width: 260px;
   }
 }

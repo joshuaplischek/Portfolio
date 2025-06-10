@@ -38,7 +38,7 @@
         background-color: rgba(255, 255, 255, 0);
         border-radius: 25px;
         box-shadow: 2px 2px 1px 1px white;
-        &:hover{
+        &:hover {
           cursor: pointer;
         }
       }
@@ -63,5 +63,37 @@
   > .project-description {
     width: 100%;
     padding: 0 50px;
+  }
+}
+
+@media (max-width: 720px) {
+  .project-card {
+    width: 100%;
+    > .project-image {
+      width: 500px;
+      height: 300px;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .project-card {
+    > .project-image {
+      width: 400px;
+      height: 250px;
+    }
+  }
+}
+
+@media (max-width: 420px) {
+  .project-card {
+    width: 100%;
+    > .project-image {
+      width: 300px;
+      height: 200px;
+    }
+    > .project-description {
+      padding: 0 25px;
+    }
   }
 }

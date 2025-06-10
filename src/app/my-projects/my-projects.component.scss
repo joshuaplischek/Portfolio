@@ -24,3 +24,21 @@ section {
     font-size: 54px;
   }
 }
+
+@media (max-width: 1464px) {
+  section {
+    > div {
+      padding: 0 25px;
+      height: 100%;
+    }
+
+  }
+}
+
+@media (max-width: 720px) {
+    section {
+    > div {
+      width: 100%;
+    }
+  }
+}

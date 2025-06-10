@@ -33,3 +33,21 @@
     color: black;
   }
 }
+
+@media (max-width: 580px){
+  .testimonial-card{
+    width: 390px;
+  }
+}
+
+@media (max-width: 480px){
+  .testimonial-card{
+    width: 290px;
+  }
+}
+
+@media (max-width: 480px){
+  .testimonial-card{
+    width: 230px;
+  }
+}
