@@ -34,8 +34,7 @@ export class HeroComponent {
 
   menuOpen = false;
 
-  onToggleMenu(isOpen: boolean) {
+  onToggleMenu() {
     this.menuOpen = !this.menuOpen; 
-    console.log('Menu state:', this.menuOpen);
   }
 }
