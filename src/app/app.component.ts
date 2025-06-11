@@ -1,6 +1,11 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { HeroComponent } from './hero/hero.component';
+import {
+  TranslateService,
+  TranslatePipe,
+  TranslateDirective,
+} from '@ngx-translate/core';
 
 @Component({
   selector: 'app-root',
@@ -9,6 +14,11 @@ import { HeroComponent } from './hero/hero.component';
   styleUrl: './app.component.scss',
 })
 export class AppComponent {
+  constructor(private translate: TranslateService) {
+    this.translate.addLangs(['de', 'en']);
+    this.translate.setDefaultLang('de');
+    this.translate.use('de'); // language switsch
+  }
   title = 'Portfolio';
 
   menuOpen = false;

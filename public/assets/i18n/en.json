@@ -1,0 +1,79 @@
+{
+  "header": {
+    "about-me": "ABOUT ME",
+    "skills": "SKILLS",
+    "proj": "PROJECTS",
+    "contact": "CONTACT"
+  },
+  "hero": {
+    "button": "Get in Touch",
+    "title": "I'M JOSHUA PLISCHEK"
+  },
+  "about-me": {
+    "title": "About me",
+    "who": "WHO IS JOSHUA??",
+    "from": "I'm from Altenkirchen (Westerwald)",
+    "travel": "I enjoy working on-site <br> with the team",
+    "remote": "I'm also open to working remotely",
+    "text": "Hi! I'm Josh, 24 years old, and I've discovered my passion for programming. I genuinely enjoy watching an idea turn into reality step by step: it starts with a concept, followed by countless lines of code – along with challenges that I tackle with full motivation. What fascinates me most about frontend development is being able to instantly see the effects of my code and experience the entire creation process firsthand. The diversity of programming languages excites me, and I love constantly learning new things.<br /> HTML, CSS/SCSS, JavaScript/TypeScript, and Angular form the foundation of my skillset. But I'm also very interested in languages like Java and Python – I'm always ready to expand my knowledge and work with them in the future. <br /><br /> I'm ready for the challenge of creating something exceptional – and making it a reality.",
+    "button": "lets talk"
+  },
+  "skills": {
+    "tools": "MY STACK",
+    "title": "Skill set",
+    "text": "At the moment, I'm primarily working with HTML, CSS/SCSS, JavaScript, TypeScript, and Angular – everything you need for modern web development. I'm also highly interested in Java and Python, and I plan to deepen my knowledge in both and apply them in future projects. I'm not only interested in what runs in the browser – desktop applications and other software projects are just as exciting to me.",
+    "ptp": "I’m also interested in the following languages:"
+  },
+  "projects": {
+    "mini-title": "MY CRAFT",
+    "button": "Project Details",
+    "title": "Projects",
+    "project-title-one": "Join",
+    "project-title-two": "Sharkie",
+    "project-title-three": "PokéDex",
+    "text": "Feel free to check out my projects and click through! I make sure everything not only looks great but also feels great to use – clean code, responsive designs, and a strong focus on user experience. Have fun exploring!",
+    "project-one": "A powerful task management tool inspired by the Kanban system. Organize your projects effortlessly via drag and drop, assign tasks to individual team members, and keep an overview at all times with clear categories.",
+    "project-two": "A fast-paced underwater adventure! Swim through dangerous depths, battle nasty enemies, and face the ultimate final boss: a ruthless killer whale. Use various attacks and power-ups – survive if you can.",
+    "project-three": "Catch them all – in style! A modern PokéDex with smart search, detailed view, and 493 Pokémon from the HeartGold/SoulSilver era. Discover, filter, and find your favorites at a glance."
+  },
+  "testimonials": {
+    "mini-title": "IN THEIR WORDS:",
+    "title": "Colleagues' Thoughts",
+    "profile": "Profile",
+    "feeback-one": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+    "feeback-two": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+    "feeback-three": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+  },
+  "contact": {
+    "mini-title": "CONTACT ME!",
+    "title": "Ready to work together?",
+    "text": "Are you looking for someone who thinks ahead, learns alongside you, and helps shape the process? I bring technical understanding, a passion for clean code, and the drive to constantly grow – ideally as part of a new team or project. If my profile aligns with what you're looking for, I’d be happy to hear from you.",
+    "name": "What's your Name?",
+    "name-tipp": "Your Name goes here",
+    "name-error": "Please enter a valid name.",
+    "email": "What' your Mail?",
+    "email-tipp": "youremail@email.com",
+    "email-error": "Please enter a valid email address.",
+    "message": "How can I help you?",
+    "message-tipp": "Hey Josh, Im interested in...",
+    "privacy_policy_start": "I've read the ",
+    "privacy_policy_link": "privacy policy",
+    "privacy_policy_end": " and agree to the processing of my data as outlined.",
+    "button": "send"
+  },
+  "join": {
+    "hello": "hello {{value}}",
+    "title": "Translation Demo"
+  },
+  "sharkie": {
+    "hello": "hello {{value}}",
+    "title": "Translation Demo"
+  },
+  "pokedex": {
+    "hello": "hello {{value}}",
+    "title": "Translation Demo"
+  },
+  "footer": {
+    "legal-notice": "Legal Notice"
+  }
+}

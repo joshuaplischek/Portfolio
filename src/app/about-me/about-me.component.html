@@ -4,7 +4,7 @@
       <img src="/assets/img/about-me/elements/Yellow.png" alt="" />
       <div class="yellow-paper-content">
         <img src="/assets/img/about-me/icons/Group 58.png" alt="" />
-        <p>Ich Komme aus Altenkirchen (Westerwald)</p>
+        <p>{{ 'about-me.from' | translate }}</p>
       </div>
     </div>
     <div class="blue-paper">
@@ -14,48 +14,29 @@
           src="/assets/img/about-me/icons/Property 1=State Relocation.png"
           alt=""
         />
-        <p>
-          Ich Arbeite gerne vor Ort <br />
-          mit dem TEAM
-        </p>
+        <p [innerHTML]="'about-me.travel' | translate"></p>
       </div>
     </div>
     <div class="orange-paper">
       <img src="/assets/img/about-me/elements/3 Orange.png" alt="" />
       <div class="orange-paper-content">
         <img src="/assets/img/about-me/icons/Status Remote.png" alt="" />
-        <p>Ebenso bin ich bereit Remote zu arbeiten</p>
+        <p>{{ 'about-me.remote' | translate }}</p>
       </div>
     </div>
   </div>
   <div class="about-me">
-    <p>WER IST JOSHUA?</p>
+    <p>{{ 'about-me.who' | translate }}</p>
     <div>
-      <h2>Über mich</h2>
+      <h2>{{ 'about-me.title' | translate }}</h2>
       <img
         class="drawing-line"
         src="/assets/img/about-me/underlines/8542ffc9296fd0ecc62b7bb7886c355ebe841e45.png"
         alt=""
       />
     </div>
-    <p>
-      Hi! Ich bin Josh, 24 Jahre alt, und habe meine Leidenschaft im
-      Programmieren gefunden. Es macht mir unglaublich viel Spaß zu sehen, wie
-      aus einer Idee Schritt für Schritt Realität wird: Zuerst entsteht das
-      Konzept, dann folgen viele Zeilen Code – mitsamt Herausforderungen, die
-      ich mit voller Motivation angehe. Besonders im Frontend-Bereich fasziniert
-      mich, dass ich direkt sehe, was mein Code bewirkt, und den gesamten
-      Entstehungsprozess miterleben kann. Die Vielfalt der Programmiersprachen
-      begeistert mich, und ich liebe es, ständig dazuzulernen. <br />
-      HTML, CSS/SCSS, JavaScript/TypeScript und Angular bilden mein Fundament.
-      Doch auch Sprachen wie Java und Python interessieren mich sehr – ich bin
-      jederzeit bereit, sie in meinen Wissensstand aufzunehmen und künftig damit
-      zu arbeiten.
+    <p [innerHTML]="'about-me.text' | translate">
 
-      <br />
-      <br />
-      Ich bin bereit für die Herausforderung, Außergewöhnliches zu schaffen –
-      und zu erschaffen.
     </p>
 
     <!-- <p>
@@ -75,10 +56,11 @@
     <div class="lets-talk-section">
       <button
         #button
+        (click)="scrollToContact()"
         (mouseenter)="onMouseEnterBtn(button)"
         (mouseleave)="onMouseLeaveBtn(button)"
       >
-        quatschen?
+        {{ 'about-me.button' | translate }}
       </button>
     </div>
   </div>

@@ -1,24 +1,20 @@
 <section>
   <div>
     <div class="testimonials-heading">
-      <p>IN THEIR WORDS:</p>
-      <h2>Colleagues' Thoughts</h2>
+      <p>{{'testimonials.mini-title' | translate}}</p>
+      <h2>{{'testimonials.title' | translate}}</h2>
     </div>
     <div class="cards">
       <app-testimonials-template
         class="card-1"
-        [feedback]="
-          'Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus eaque quis id quas at placeat, aut animi maiores aperiam illum cumque nulla blanditiis facere nisi minima reprehenderit sapiente officia magnam?'
-        "
+        [feedback]="'testimonials.feeback-one' | translate"
         [name]="'name 1'"
         [status]="'Frontend Developer'"
         [link]="''"
       >
       </app-testimonials-template>
       <app-testimonials-template
-        [feedback]="
-          'Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus eaque quis id quas at placeat, aut animi maiores aperiam illum cumque nulla blanditiis facere nisi minima reprehenderit sapiente officia magnam?'
-        "
+        [feedback]="'testimonials.feeback-two' | translate"
         [name]="'name 2'"
         [status]="'Frontend Developer'"
         [link]="''"
@@ -26,9 +22,7 @@
       >
       </app-testimonials-template>
       <app-testimonials-template
-        [feedback]="
-          'Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus eaque quis id quas at placeat, aut animi maiores aperiam illum cumque nulla blanditiis facere nisi minima reprehenderit sapiente officia magnam?'
-        "
+        [feedback]="'testimonials.feeback-three' | translate"
         [name]="'name 3'"
         [status]="'Frontend Developer'"
         [link]="''"

@@ -3,6 +3,8 @@ import { FooterComponent } from './footer/footer.component';
 import { FormsModule, NgForm } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
+import { TranslatePipe } from '@ngx-translate/core';
+import { RouterModule } from '@angular/router';
 
 interface ContactData {
   name: string;
@@ -14,7 +16,7 @@ interface ContactData {
 @Component({
   selector: 'app-contact',
   standalone: true,
-  imports: [FooterComponent, FormsModule, CommonModule],
+  imports: [FooterComponent, FormsModule, CommonModule, TranslatePipe, RouterModule],
   templateUrl: './contact.component.html',
   styleUrl: './contact.component.scss',
 })

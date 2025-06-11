@@ -3,8 +3,8 @@
     <div>
       <div class="contact-heading">
         <div>
-          <p>Schreib mir!</p>
-          <h2>Bereit für eine Zusammenarbeit?</h2>
+          <p>{{ 'contact.mini-title' | translate }}</p>
+          <h2>{{ 'contact.title' | translate }}</h2>
         </div>
         <div class="logoSticker">
           <img src="assets/img/contact/elements/Logo Projekt.png" alt="" />
@@ -13,11 +13,7 @@
       <div class="contact-text-and-form">
         <div class="contact-text">
           <p>
-            Du suchst jemanden, der mitdenkt, mitlernt und mitgestaltet? Ich
-            bringe technisches Verständnis, Begeisterung für sauberen Code und
-            den Wunsch mit, mich stetig weiterzuentwickeln – gerne auch im
-            Rahmen eines neuen Teams oder Projekts. Wenn mein Profil zu deinem
-            Vorhaben passt, freue ich mich, von dir zu hören.
+            {{ 'contact.text' | translate }}
           </p>
         </div>
 
@@ -26,44 +22,44 @@
             <div>
               <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
                 <div id="nameInput" class="border inputs">
-                  <label for="">What's your Name?</label>
+                  <label for="">{{ 'contact.name' | translate }}</label>
                   <input
                     #name="ngModel"
                     [(ngModel)]="contactData.name"
                     type="text"
                     id="name"
                     name="name"
-                    placeholder="Your Name goes here"
+                    [placeholder]="'contact.name-tipp' | translate"
                     required
                   />
                   @if (name.invalid && name.touched) {
                   <div class="error-message">
-                    <p>Bitte geben Sie einen gültigen Namen ein</p>
+                    <p>{{ 'contact.name-error' | translate }}</p>
                   </div>
                   }
                 </div>
 
                 <div id="mailInput" class="border inputs">
-                  <label for="">What' your Mail?</label>
+                  <label for="">{{ 'contact.email' | translate }}</label>
                   <input
                     #email="ngModel"
                     [(ngModel)]="contactData.email"
                     type="email"
                     id="email"
                     name="email"
-                    placeholder="youremail@email.com"
+                    [placeholder]="'contact.email-tipp' | translate"
                     required
                     pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}"
                   />
                   @if (email.invalid && email.touched) {
                   <div class="error-message">
-                    <p>Bitte geben Sie eine gültige Email ein</p>
+                    <p>{{ 'contact.email-error' | translate }}</p>
                   </div>
                   }
                 </div>
 
                 <div id="textInput" class="border text-message-div inputs">
-                  <label for="">How can I help you?</label>
+                  <label for="">{{ 'contact.message' | translate }}</label>
                   <textarea
                     #message="ngModel"
                     minlength="4"
@@ -71,7 +67,7 @@
                     type="text"
                     id="message"
                     name="message"
-                    placeholder="Hey Josh, Im interested in..."
+                    [placeholder]="'contact.message-tipp' | translate"
                     required
                   ></textarea>
                   @if (!message.valid && message.touched) { }
@@ -85,9 +81,11 @@
                     name="privacy"
                   />
                   <p>
-                    I've read the
-                    <a href="/privacy-policy">privacy policy</a> and agree to
-                    the processing of my data as outlined.
+                    {{ 'contact.privacy_policy_start' | translate }}
+                    <a [routerLink]="['/privacy-policy']">
+                      {{ "contact.privacy_policy_link" | translate }}
+                    </a>
+                    {{ "contact.privacy_policy_end" | translate }}
                   </p>
                 </div>
               </form>
@@ -111,7 +109,7 @@
             (mouseenter)="onMouseEnterBtn(button)"
             (mouseleave)="onMouseLeaveBtn(button)"
           >
-            Send
+            {{ 'contact.button' | translate }}
           </button>
         </div>
       </div>

@@ -1,0 +1,90 @@
+{
+  "header": {
+    "about-me": "ÜBER MICH",
+    "skills": "SKILLS",
+    "proj": "PROJEKTE",
+    "contact": "KONTAKT"
+  },
+  "hero": {
+    "button": "Kontakt",
+    "title": "ICH BIN JOSHUA PLISCHEK"
+  },
+  "about-me": {
+    "title": "Über mich",
+    "who": "WER IST JOSHUA?",
+    "from": "Ich Komme aus Altenkirchen (Westerwald)",
+    "travel": "Ich Arbeite gerne vor Ort <br> mit dem TEAM",
+    "remote": "Ebenso bin ich bereit Remote zu arbeiten",
+    "text": "Hi! Ich bin Josh, 24 Jahre alt, und habe meine Leidenschaft im Programmieren gefunden. Es macht mir unglaublich viel Spaß zu sehen, wie aus einer Idee Schritt für Schritt Realität wird: Zuerst entsteht das Konzept, dann folgen viele Zeilen Code – mitsamt Herausforderungen, dieich mit voller Motivation angehe. Besonders im Frontend-Bereich fasziniert mich, dass ich direkt sehe, was mein Code bewirkt, und den gesamten Entstehungsprozess miterleben kann. Die Vielfalt der Programmiersprachen begeistert mich, und ich liebe es, ständig dazuzulernen. <br /> HTML, CSS/SCSS, JavaScript/TypeScript und Angular bilden mein Fundament. Doch auch Sprachen wie Java und Python interessieren mich sehr – ich bin jederzeit bereit, sie in meinen Wissensstand aufzunehmen und künftig damit zu arbeiten. <br /> <br /> Ich bin bereit für die Herausforderung, Außergewöhnliches zu schaffen – und zu erschaffen.",
+    "button": "reden wir?"
+  },
+  "skills": {
+    "tools": "MEINE TOOLS",
+    "title": "Skill set",
+    "text": "Momentan arbeite ich vor allem mit HTML, CSS/SCSS, JavaScript, TypeScript und Angular – alles, was man für moderne Webentwicklung braucht. Java und Python interessieren mich ebenfalls sehr, und ich möchte beide künftig gezielt vertiefen und in Projekten einsetzen. Mich interessiert nicht nur, was im Browser läuft – auch Desktop-Apps und andere Softwareprojekte reizen mich sehr.",
+    "ptp": "Außerdem bin ich an folgenden Sprachen intressiert:"
+  },
+  "projects": {
+    "mini-title": "MEINE",
+    "title": "Projekte",
+    "button": "Projekt Details",
+    "text": "Schau dir gern meine Projekte an und klick dich einfach mal durch! Ich achte darauf, dass alles nicht nur gut aussieht, sondern sich auch richtig gut anfühlt – klarer Code, responsive Designs und ein Fokus auf Nutzerfreundlichkeit. Viel Spaß beim Ausprobieren!",
+    "project-title-one": "Join",
+    "project-title-two": "Sharkie",
+    "project-title-three": "PokéDex",
+    "project-one": "Ein leistungsstarkes Aufgabenmanagement-Tool, inspiriert vom Kanban-System. Organisiere deine Projekte mühelos per Drag-and-Drop, weise Aufgaben einzelnen Teammitgliedern zu und behalte mit klaren Kategorien stets den Überblick.",
+    "project-two": "Ein rasantes Unterwasser-Abenteuer! Schwimme durch gefährliche Tiefen, kämpfe gegen fiese Gegner und stelle dich dem ultimativen Endboss: einem gnadenlosen Killerwal. Nutze verschiedene Angriffe und Power-ups – überlebe, wenn du kannst",
+    "project-three": "Fang sie alle – mit Stil! Ein moderner PokéDex mit smarter Suche, detaillierter Detailansicht und 493 Pokémon aus der HeartGold/SoulSilver-Ära. Entdecke, filtere und finde deine Favoriten auf einen Blick."
+  },
+   "project-card": {
+    "mini-title": "MEINE",
+    "title": "Projekte",
+    "text": "Schau dir gern meine Projekte an und klick dich einfach mal durch! Ich achte darauf, dass alles nicht nur gut aussieht, sondern sich auch richtig gut anfühlt – klarer Code, responsive Designs und ein Fokus auf Nutzerfreundlichkeit. Viel Spaß beim Ausprobieren!",
+    "project-title-one": "Join",
+    "project-title-two": "Sharkie",
+    "project-title-three": "PokéDex",
+    "project-one": "Ein leistungsstarkes Aufgabenmanagement-Tool, inspiriert vom Kanban-System. Organisiere deine Projekte mühelos per Drag-and-Drop, weise Aufgaben einzelnen Teammitgliedern zu und behalte mit klaren Kategorien stets den Überblick.",
+    "project-two": "Ein rasantes Unterwasser-Abenteuer! Schwimme durch gefährliche Tiefen, kämpfe gegen fiese Gegner und stelle dich dem ultimativen Endboss: einem gnadenlosen Killerwal. Nutze verschiedene Angriffe und Power-ups – überlebe, wenn du kannst",
+    "project-three": "Fang sie alle – mit Stil! Ein moderner PokéDex mit smarter Suche, detaillierter Detailansicht und 493 Pokémon aus der HeartGold/SoulSilver-Ära. Entdecke, filtere und finde deine Favoriten auf einen Blick."
+  },
+  "testimonials": {
+    "mini-title": "IN IHREN WORTEN",
+    "title": "Was Kollegen sagen",
+    "profile": "Profil",
+    "feeback-one": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+    "feeback-two": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+    "feeback-three": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+  },
+  "contact": {
+    "mini-title": "TRAU DICH!",
+    "title": "Bereit für eine Zusammenarbeit?",
+    "text": "Du suchst jemanden, der mitdenkt, mitlernt und mitgestaltet? Ich bringe technisches Verständnis, Begeisterung für sauberen Code und den Wunsch mit, mich stetig weiterzuentwickeln – gerne auch im Rahmen eines neuen Teams oder Projekts. Wenn mein Profil zu deinem Vorhaben passt, freue ich mich, von dir zu hören.",
+    "name": "Wie ist dein Name?",
+    "name-tipp": "Hier dein Name.",
+    "name-error": "Bitte gib einen gültigen Namen ein",
+    "email": "Wie ist deine E-Mail-Adresse?",
+    "email-tipp": "deineMail@email.de",
+    "email-error": "Bitte gib eine gültige E-Mail-Adresse ein.",
+    "message": "Wie kann ich dir helfen?",
+    "message-tipp": "Hey Josh....",
+    "privacy_policy_start": "Ich habe die ",
+    "privacy_policy_link": "Datenschutzerklärung ",
+    "privacy_policy_end": "gelesen und stimme der Verarbeitung meiner Daten wie darin beschrieben zu.",
+    "button": "senden"
+  },
+  "join": {
+    "hello": "hello {{value}}",
+    "title": "Translation Demo"
+  },
+  "sharkie": {
+    "hello": "hello {{value}}",
+    "title": "Translation Demo"
+  },
+  "pokedex": {
+    "hello": "hello {{value}}",
+    "title": "Translation Demo"
+  },
+  "footer": {
+    "legal-notice": "Impressum"
+  }
+}

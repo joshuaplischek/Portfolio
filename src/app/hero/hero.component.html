@@ -10,7 +10,7 @@
         (mouseleave)="onMouseLeave(helloWorldElement)"
       >
         <p>Hello world</p>
-        <p id="myNameIs">I'M JOSHUA PLISCHEK</p>
+        <p id="myNameIs">{{'hero.title' | translate}}</p>
       </div>
       <img
         class="helloImage"
@@ -53,10 +53,11 @@
     <div id="getInTouch">
       <button
         #button
+        (click)="scrollToContact()"
         (mouseenter)="onMouseEnterBtn(button)"
         (mouseleave)="onMouseLeaveBtn(button)"
       >
-        Get in Touch
+        {{ 'hero.button' | translate }}
       </button>
     </div>
   </div>

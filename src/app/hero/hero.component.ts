@@ -1,15 +1,22 @@
 import { Component } from '@angular/core';
 import { HeaderComponent } from '../header/header.component';
 import { BurgerMenuComponent } from '../burger-menu/burger-menu.component';
+import { TranslatePipe } from '@ngx-translate/core';
+import { ViewportScroller } from '@angular/common';
 
 @Component({
   selector: 'app-hero',
   standalone: true,
-  imports: [HeaderComponent, BurgerMenuComponent],
+  imports: [HeaderComponent, BurgerMenuComponent, TranslatePipe],
   templateUrl: './hero.component.html',
   styleUrl: './hero.component.scss',
 })
 export class HeroComponent {
+  constructor(private viewportScroller: ViewportScroller) {}
+
+  scrollToContact() {
+    this.viewportScroller.scrollToAnchor('contact');
+  }
   onMouseEnter(element: HTMLElement) {
     element.classList.remove('animate-out');
     element.classList.remove('fade');
@@ -35,6 +42,6 @@ export class HeroComponent {
   menuOpen = false;
 
   onToggleMenu() {
-    this.menuOpen = !this.menuOpen; 
+    this.menuOpen = !this.menuOpen;
   }
 }

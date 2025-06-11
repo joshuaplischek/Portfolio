@@ -1,8 +1,8 @@
 <section id="skills">
   <div class="skills-heading">
     <div>
-      <div><p>MY STACK</p></div>
-      <div><h2>Skill set</h2></div>
+      <div><p>{{ 'skills.tools' | translate }}</p></div>
+      <div><h2>{{ 'skills.title' | translate }}</h2></div>
       <img
         class="circle-reveal"
         src="/assets/img/skills/underlines/Property 1=linea copia 4.png"
@@ -13,12 +13,7 @@
   <div class="skills-description-container">
     <div class="skills-description">
       <p>
-        Momentan arbeite ich vor allem mit HTML, CSS/SCSS, JavaScript,
-        TypeScript und Angular – alles, was man für moderne Webentwicklung
-        braucht. Java und Python interessieren mich ebenfalls sehr, und ich
-        möchte beide künftig gezielt vertiefen und in Projekten einsetzen. Mich
-        interessiert nicht nur, was im Browser läuft – auch Desktop-Apps und
-        andere Softwareprojekte reizen mich sehr.
+        {{ 'skills.text' | translate }}
       </p>
     </div>
     <div class="skill-icons">
@@ -84,7 +79,7 @@
       class="also-intrested"
       (click)="toggleImage(pullToPeel, interested)"
     >
-      <p>Außerdem bin ich an folgenden Sprachen intressiert:</p>
+      <p>{{ 'skills.ptp' | translate }}</p>
       <div class="peel-off-icons">
         <div>
           <img

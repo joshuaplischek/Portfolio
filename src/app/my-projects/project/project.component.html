@@ -1,7 +1,7 @@
 <div  class="project-card">
     <div  class="project-image" [ngStyle]="{'background-image': 'url(\'' + image + '\')'}">
         <div class="project-overlay">
-            <button [routerLink]="projectLink">Projekt details</button>
+            <button [routerLink]="projectLink">{{'projects.button' | translate }}</button>
         </div>
     </div>
     <div class="project-title"><h3>{{title}}</h3></div>
