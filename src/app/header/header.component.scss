@@ -41,6 +41,10 @@ header {
 .about-me {
   display: flex;
   flex-direction: column;
+  width: 81px;
+  >a{ 
+    width: 81px;
+  }
   .about-me-underline {
     opacity: 0;
     transition: ease-in-out 0.3s all;
@@ -259,6 +263,12 @@ h1 {
 .switch:checked:before {
   transform: translateX(100%);
   border-color: $portfolioBlue;
+}
+
+@media (max-width: 1000px) {
+  header{
+    gap: 75px;
+  }
 }
 
 @media (max-width: 920px) {

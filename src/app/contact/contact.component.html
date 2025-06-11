@@ -2,114 +2,122 @@
   <div class="contact-me-info">
     <div>
       <div class="contact-heading">
-        <p>Schreib mir!</p>
-        <h2>Bereit für eine Zusammenarbeit?</h2>
+        <div>
+          <p>Schreib mir!</p>
+          <h2>Bereit für eine Zusammenarbeit?</h2>
+        </div>
+        <div class="logoSticker">
+          <img src="assets/img/contact/elements/Logo Projekt.png" alt="" />
+        </div>
       </div>
-      <div>
-        <p>
-          Du suchst jemanden, der mitdenkt, mitlernt und mitgestaltet? Ich
-          bringe technisches Verständnis, Begeisterung für sauberen Code und den
-          Wunsch mit, mich stetig weiterzuentwickeln – gerne auch im Rahmen
-          eines neuen Teams oder Projekts. Wenn mein Profil zu deinem Vorhaben
-          passt, freue ich mich, von dir zu hören.
-        </p>
+      <div class="contact-text-and-form">
+        <div class="contact-text">
+          <p>
+            Du suchst jemanden, der mitdenkt, mitlernt und mitgestaltet? Ich
+            bringe technisches Verständnis, Begeisterung für sauberen Code und
+            den Wunsch mit, mich stetig weiterzuentwickeln – gerne auch im
+            Rahmen eines neuen Teams oder Projekts. Wenn mein Profil zu deinem
+            Vorhaben passt, freue ich mich, von dir zu hören.
+          </p>
+        </div>
+
+        <div class="contact-container">
+          <div>
+            <div>
+              <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
+                <div id="nameInput" class="border inputs">
+                  <label for="">What's your Name?</label>
+                  <input
+                    #name="ngModel"
+                    [(ngModel)]="contactData.name"
+                    type="text"
+                    id="name"
+                    name="name"
+                    placeholder="Your Name goes here"
+                    required
+                  />
+                  @if (name.invalid && name.touched) {
+                  <div class="error-message">
+                    <p>Bitte geben Sie einen gültigen Namen ein</p>
+                  </div>
+                  }
+                </div>
+
+                <div id="mailInput" class="border inputs">
+                  <label for="">What' your Mail?</label>
+                  <input
+                    #email="ngModel"
+                    [(ngModel)]="contactData.email"
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="youremail@email.com"
+                    required
+                    pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}"
+                  />
+                  @if (email.invalid && email.touched) {
+                  <div class="error-message">
+                    <p>Bitte geben Sie eine gültige Email ein</p>
+                  </div>
+                  }
+                </div>
+
+                <div id="textInput" class="border text-message-div inputs">
+                  <label for="">How can I help you?</label>
+                  <textarea
+                    #message="ngModel"
+                    minlength="4"
+                    [(ngModel)]="contactData.message"
+                    type="text"
+                    id="message"
+                    name="message"
+                    placeholder="Hey Josh, Im interested in..."
+                    required
+                  ></textarea>
+                  @if (!message.valid && message.touched) { }
+                </div>
+                <div class="privacy-policy">
+                  <input
+                    type="checkbox"
+                    required
+                    #privacy="ngModel"
+                    [(ngModel)]="contactData.privacyAccepted"
+                    name="privacy"
+                  />
+                  <p>
+                    I've read the
+                    <a href="/privacy-policy">privacy policy</a> and agree to
+                    the processing of my data as outlined.
+                  </p>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="arrow-button">
         <div class="arrow">
           <img
             src="/assets/img/contact/underlines/Property 1=Hover.png"
             alt="animated arrow"
           />
         </div>
+        <div class="send">
+          <button
+            #button
+            type="submit"
+            value="submit"
+            [disabled]="!contactForm.valid || isSubmitting"
+            (mouseenter)="onMouseEnterBtn(button)"
+            (mouseleave)="onMouseLeaveBtn(button)"
+          >
+            Send
+          </button>
+        </div>
       </div>
       <div class="site-owner">
         <a href="#hero"><img src="/assets/img/logo/logo_blue.png" alt="" /></a>
         <p>© Joshua Plischek 2025</p>
-      </div>
-    </div>
-    <div class="contact-container">
-      <div>
-        <div class="logoSticker">
-          <img src="assets/img/contact/elements/Logo Projekt.png" alt="" />
-        </div>
-        <div>
-          <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
-            <div id="nameInput" class="border inputs">
-              <label for="">What's your Name?</label>
-              <input
-                #name="ngModel"
-                [(ngModel)]="contactData.name"
-                type="text"
-                id="name"
-                name="name"
-                placeholder="Your Name goes here"
-                required
-              />
-              @if (name.invalid && name.touched) {
-              <div class="error-message">
-                <p>Bitte geben Sie einen gültigen Namen ein</p>
-              </div>
-              }
-            </div>
-
-            <div id="mailInput" class="border inputs">
-              <label for="">What' your Mail?</label>
-              <input
-                #email="ngModel"
-                [(ngModel)]="contactData.email"
-                type="email"
-                id="email"
-                name="email"
-                placeholder="youremail@email.com"
-                required
-                pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}"
-              />
-              @if (email.invalid && email.touched) {
-              <div class="error-message">
-                <p>Bitte geben Sie eine gültige Email ein</p>
-              </div>
-              }
-            </div>
-
-            <div id="textInput" class="border text-message-div inputs">
-              <label for="">How can I help you?</label>
-              <textarea
-                #message="ngModel"
-                minlength="4"
-                [(ngModel)]="contactData.message"
-                type="text"
-                id="message"
-                name="message"
-                placeholder="Hey Josh, Im interested in..."
-                required
-              ></textarea>
-              @if (!message.valid && message.touched) { }
-            </div>
-            <div class="privacy-policy">
-              <input
-                type="checkbox"
-                required
-                #privacy="ngModel"
-                [(ngModel)]="contactData.privacyAccepted"
-                name="privacy"
-              />
-              <p>
-                I've read the <a href="/privacy-policy">privacy policy</a> and
-                agree to the processing of my data as outlined.
-              </p>
-            </div>
-            <div class="send">
-              <button
-                #button
-                type="submit"
-                value="submit"
-                [disabled]="!contactForm.valid || isSubmitting"
-                (mouseenter)="onMouseEnterBtn(button)"
-                (mouseleave)="onMouseLeaveBtn(button)"
-              >
-                Send
-              </button>
-            </div>
-          </form>
-        </div>
       </div>
     </div>
   </div>

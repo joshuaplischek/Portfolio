@@ -2,35 +2,39 @@
 @import "./../../animations.scss";
 footer {
   width: 100%;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
+  padding: 25px 0;
   > div {
+    width: 100%;
     display: flex;
+    justify-content: space-around;
     align-items: center;
-    justify-content: center;
-    width: 120px;
-    height: 40px;
-    >img{
-        top: -35px;
-        left: -100px;
-    }
-    > a {
-      color: white;
-    }
     > div {
       display: flex;
       align-items: center;
       justify-content: center;
       width: 120px;
       height: 40px;
-      border-radius: 25px;
-      transition: all ease-in-out 0.3s;
+      > img {
+        top: -35px;
+        left: -100px;
+      }
       > a {
         color: white;
       }
-      &:hover {
-        background-color: $portfolioBlue;
+      > div {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 120px;
+        height: 40px;
+        border-radius: 25px;
+        transition: all ease-in-out 0.3s;
+        > a {
+          color: white;
+        }
+        &:hover {
+          background-color: $portfolioBlue;
+        }
       }
     }
   }
@@ -44,7 +48,6 @@ footer {
 }
 
 .animate-out {
-
   ~ .linkImg {
     animation: rotateOutShort 0.8s ease forwards;
   }
@@ -54,5 +57,18 @@ footer {
   ~ .linkImg {
     transition: all 0.4s ease-in-out;
     opacity: 0;
+  }
+}
+
+@media (max-width: 570px) {
+  footer {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    > div {
+      width: 300px;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
   }
 }
