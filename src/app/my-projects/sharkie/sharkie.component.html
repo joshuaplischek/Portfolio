@@ -31,4 +31,22 @@
       alt="image of an arrow"
     />
   </div>
+    <div class="mobile-navigation">
+    <div id="goBackMobile">
+      <img
+        [routerLink]="['/']"
+        src="/assets/img/my-projects/elements/left-arrow.png"
+        alt="image of an arrow"
+      />
+      <p [routerLink]="['/']">{{ "pokedex.back" | translate }}</p>
+    </div>
+    <div id="goNextMobile">
+      <p [routerLink]="['/pokedex']">{{ "join.next" | translate }}</p>
+      <img
+        [routerLink]="['/pokedex']"
+        src="/assets/img/my-projects/elements/right-arrow.png"
+        alt="image of an arrow"
+      />
+    </div>
+  </div>
 </section>

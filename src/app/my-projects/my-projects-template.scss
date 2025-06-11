@@ -12,7 +12,7 @@ section {
   padding: 0 50px;
 }
 
-#goBack {
+#goBack, #goBackMobile {
   display: flex;
   justify-content: start;
   align-items: center;
@@ -41,7 +41,7 @@ app-project-template {
   align-items: center;
 }
 
-#goNext {
+#goNext, #goNextMobile {
   display: flex;
   justify-content: end;
   align-items: center;
@@ -64,13 +64,76 @@ app-project-template {
   }
 }
 
+.mobile-navigation{
+  display: none;
+}
+
+
 @media (max-width: 1100px) {
   section{
-    height: 1000%;
+    height: 100%;
     background-position: top center;
-    background-size: cover;
+    background-size: 150%;
     background-image: url('/assets/img/my-projects/backround/Note book paper - mobile.png');
   }
 }
+
+@media (max-width: 940px) {
+  #goBack, #goNext {
+    display: none;
+  }
+  .mobile-navigation{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    >div{
+      >p{
+        color: white;
+      }
+    }
+    
+  }
+}
+
+@media (max-width: 600px){
+    section{
+    background-size: 220%;
+  }
+}
+
+@media (max-width: 474px){
+    section{
+    background-size: 300%;
+  }
+}
+
+@media (max-width: 400px){
+    section{
+    background-size: 350%;
+  }
+    .mobile-navigation{
+    >div{
+      >p{
+        display: none;
+      }
+    }
+    
+  }
+}
+
+@media (max-width: 370px){
+    section{
+    background-size: 400%;
+  }
+}
+
+@media (max-width: 340px){
+    section{
+    background-size: 500%;
+  }
+}
+
+
+
 
 
