@@ -5,16 +5,16 @@
       src="/assets/img/my-projects/elements/left-arrow.png"
       alt="image of an arrow"
     />
-    <p [routerLink]="['/']">Zurück</p>
+    <p [routerLink]="['/']">{{'sharkie.back' | translate }}</p>
   </div>
   <app-project-template
   [projectTitle]="'Sharkie'"
-    [projectDescription]="'Beschreibung'"
-    [projectDescriptionText]="'Sharkie ist ein liebevoll gestaltetes 2D-Browserspiel mit einem einzigartigen Unterwasser-Look. Der Spieler steuert einen kleinen Hai durch verschiedene Level, weicht Gefahren aus und besiegt Gegner mit Wasserangriffen. Ziel ist es, das Level zu überleben und möglichst viele Punkte zu sammeln. Die Spielgrafiken, Animationen und das Design wurden individuell angepasst, um ein stimmiges Spielerlebnis zu schaffen.'"
-    [projectDetails]="'Umsetzungsdetails'"
-    [projectDetailsText]="'Entwickelt mit HTML5, CSS und JavaScript unter Nutzung des Canvas-Elements. Die Spielmechanik basiert auf objektorientierter Programmierung mit Klassen für Spiellogik, Animation und Steuerung. Tastatureingaben steuern Bewegung und Angriffe. Das Projekt zeigt meine Kenntnisse in Game-Logik, Animation und sauberer Code-Struktur.'"
-    [projectDuration]="'Dauer:'"
-    [projectDurationInfo]="'3 Wochen'"
+    [projectDescription]="'sharkie.description' | translate "
+    [projectDescriptionText]="'sharkie.description-text' | translate "
+    [projectDetails]="'sharkie.details' | translate "
+    [projectDetailsText]="'sharkie.details-text' | translate "
+    [projectDuration]="'sharkie.duration' | translate "
+    [projectDurationInfo]="'sharkie.duration-text' | translate "
     [projectExampleImg]="'/assets/img/my-projects/backround/Property 1=Join.png'"
     [projectGitHubBtn]="'https://google.de'"
     [technologies]="[
@@ -25,7 +25,7 @@
   >
   </app-project-template>
   <div id="goNext">
-    <p [routerLink]="['/pokedex']">nächstes Projekt</p>
+    <p [routerLink]="['/pokedex']">{{'sharkie.next' | translate }}</p>
     <img [routerLink]="['/pokedex']"
       src="/assets/img/my-projects/elements/right-arrow.png"
       alt="image of an arrow"

@@ -5,16 +5,17 @@
       src="/assets/img/my-projects/elements/left-arrow.png"
       alt="image of an arrow"
     />
-    <p [routerLink]="['/']">Zurück</p>
+    <p [routerLink]="['/']">{{'pokedex.back' | translate }}</p>
   </div>
   <app-project-template
   [projectTitle]="'PokèDex'"
     [projectDescription]="'Beschreibung'"
-    [projectDescriptionText]="'Dieser Pokédex ist eine benutzerfreundliche Webanwendung zur Durchsuchung und Anzeige von Pokémon. Nutzer können gezielt nach Namen suchen und erhalten eine übersichtliche Detailansicht mit relevanten Informationen. Die gesamte Anwendung ist auf Deutsch gestaltet.'"
-    [projectDetails]="'Umsetzungsdetails'"
-    [projectDetailsText]="'Der Pokédex wurde mit HTML, CSS und JavaScript entwickelt. Die Daten werden dynamisch über die PokeAPI geladen. Eine Overlay-Ansicht zeigt detaillierte Informationen zu jedem Pokémon, inklusive Navigation. Die Suchfunktion greift ab drei Buchstaben auf bis zu 493 Pokémon zu. Das Projekt entstand im Rahmen meiner Ausbildung zum Frontend-Entwickler und zeigt meine Fähigkeiten im Umgang mit APIs, DOM-Manipulation und UI-Design.'"
-    [projectDuration]="'Dauer:'"
-    [projectDurationInfo]="'5 Wochen'"
+    [projectDescription]="'pokedex.description' | translate "
+    [projectDescriptionText]="'pokedex.description-text' | translate "
+    [projectDetails]="'pokedex.details' | translate "
+    [projectDetailsText]="'pokedex.details-text' | translate "
+    [projectDuration]="'pokedex.duration' | translate "
+    [projectDurationInfo]="'pokedex.duration-text' | translate "
     [projectExampleImg]="'/assets/img/my-projects/backround/Property 1=Join.png'"
     [projectGitHubBtn]="'https://google.de'"
     [technologies]="[
@@ -25,7 +26,7 @@
   >
   </app-project-template>
   <div id="goNext">
-    <p [routerLink]="['/join']">nächstes Projekt</p>
+    <p [routerLink]="['/join']">{{'join.next' | translate }}</p>
     <img [routerLink]="['/join']"
       src="/assets/img/my-projects/elements/right-arrow.png"
       alt="image of an arrow"

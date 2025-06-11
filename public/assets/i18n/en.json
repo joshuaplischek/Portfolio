@@ -62,16 +62,34 @@
     "button": "send"
   },
   "join": {
-    "hello": "hello {{value}}",
-    "title": "Translation Demo"
+    "description": "Description",
+    "description-text": "Task manager inspired by the Kanban system. Create and organize tasks using drag-and-drop functionality, and assign them to users and categories.",
+    "details": "Implementation Details",
+    "details-text": "A short text describing your role or the workflow for this specific project. Give a recruiter insight into your knowledge and your ability to work independently or in a structured team setting.",
+    "duration": "Duration",
+    "duration-text": "5 weeks",
+    "back": "back",
+    "next": "next project"
   },
   "sharkie": {
-    "hello": "hello {{value}}",
-    "title": "Translation Demo"
+    "description": "Description",
+    "description-text": "Sharkie is a lovingly designed 2D browser game with a unique underwater look. The player controls a small shark through various levels, avoids dangers, and defeats enemies with water attacks. The goal is to survive the level and collect as many points as possible. All graphics, animations, and designs were custom-made to create a cohesive gaming experience.",
+    "details": "Implementation Details",
+    "details-text": "Developed using HTML5, CSS, and JavaScript with the Canvas element. The game mechanics are based on object-oriented programming with classes for game logic, animation, and controls. Keyboard inputs handle movement and attacks. This project showcases my knowledge in game logic, animation, and clean code structure.",
+    "duration": "Duration",
+    "duration-text": "3 weeks",
+    "back": "back",
+    "next": "next project"
   },
   "pokedex": {
-    "hello": "hello {{value}}",
-    "title": "Translation Demo"
+    "description": "Description",
+    "description-text": "This Pokédex is a user-friendly web application for browsing and viewing Pokémon. Users can search by name and get a clear detail view with all relevant information. The entire app is built in German.",
+    "details": "Implementation Details",
+    "details-text": "The Pokédex was developed using HTML, CSS, and JavaScript. Data is dynamically fetched via the PokeAPI. An overlay view provides detailed information for each Pokémon, including navigation. The search function activates after entering three letters and covers up to 493 Pokémon. This project was part of my frontend development training and demonstrates my skills in working with APIs, DOM manipulation, and UI design.",
+    "duration": "Duration",
+    "duration-text": "1 week",
+    "back": "back",
+    "next": "next project"
   },
   "footer": {
     "legal-notice": "Legal Notice"

@@ -5,16 +5,16 @@
       src="/assets/img/my-projects/elements/left-arrow.png"
       alt="image of an arrow"
     />
-    <p [routerLink]="['/']">Zurück</p>
+    <p [routerLink]="['/']">{{'join.back' | translate }}</p>
   </div>
   <app-project-template
     [projectTitle]="'Join'"
-    [projectDescription]="'Beschreibung'"
-    [projectDescriptionText]="'Aufgabenmanager inspiriert vom Kanban-System. Erstelle und organisiere Aufgaben mithilfe von Drag-and-Drop-Funktionen, weise Benutzern und Kategorien zu.'"
-    [projectDetails]="'Umsetzungsdetails'"
-    [projectDetailsText]="'Kurzer Text, der deine Rolle oder den Workflow für dieses spezifische Projekt beschreibt. Gib einem Recruiter einen Einblick in dein Wissen sowie deine Fähigkeit, selbstständig oder im Team strukturiert zu arbeit'"
-    [projectDuration]="'Dauer:'"
-    [projectDurationInfo]="'5 Wochen'"
+    [projectDescription]="'join.description' | translate "
+    [projectDescriptionText]="'join.description-text' | translate "
+    [projectDetails]="'join.details' | translate "
+    [projectDetailsText]="'join.details-text' | translate "
+    [projectDuration]="'join.duration' | translate "
+    [projectDurationInfo]="'join.duration-text' | translate "
     [projectExampleImg]="'/assets/img/my-projects/backround/Property 1=Join.png'"
     [projectGitHubBtn]="'https://google.de'"
     [technologies]="[
@@ -27,7 +27,7 @@
   >
   </app-project-template>
   <div id="goNext">
-    <p [routerLink]="['/sharkie']">nächstes Projekt</p>
+    <p [routerLink]="['/sharkie']">{{'join.next' | translate }}</p>
     <img [routerLink]="['/sharkie']"
       src="/assets/img/my-projects/elements/right-arrow.png"
       alt="image of an arrow"
