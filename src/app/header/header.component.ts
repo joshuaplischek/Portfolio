@@ -1,5 +1,9 @@
 import { Component, EventEmitter, Output } from '@angular/core';
-import { TranslateDirective, TranslatePipe } from '@ngx-translate/core';
+import {
+  TranslateDirective,
+  TranslatePipe,
+  TranslateService,
+} from '@ngx-translate/core';
 
 @Component({
   selector: 'app-header',
@@ -9,6 +13,7 @@ import { TranslateDirective, TranslatePipe } from '@ngx-translate/core';
   styleUrl: './header.component.scss',
 })
 export class HeaderComponent {
+  constructor(private translate: TranslateService) {}
   isEnglish = false;
 
   onLanguageChange(event: Event) {
@@ -21,15 +26,16 @@ export class HeaderComponent {
   }
 
   private setEnglish() {
-    this.isEnglish = true;
-    // Hier Logik für Englisch einfügen
-    console.log('Sprache auf Englisch gesetzt');
+    this.translate.use('en');
   }
 
   private setGerman() {
-    this.isEnglish = false;
-    // Hier Logik für Deutsch einfügen
-    console.log('Sprache auf Deutsch gesetzt');
+    this.translate.use('de');
+  }
+
+  resetBurgerMenu() {
+    this.isMenuOpen = false;
+    this.toggleMenu.emit(false);
   }
 
   isMenuOpen = false;

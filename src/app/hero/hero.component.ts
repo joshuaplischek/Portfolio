@@ -41,7 +41,12 @@ export class HeroComponent {
 
   menuOpen = false;
 
-  onToggleMenu() {
-    this.menuOpen = !this.menuOpen;
+  closeMenu(header: HeaderComponent) {
+    this.menuOpen = false;
+    header.resetBurgerMenu();
+  }
+
+  onToggleMenu(isOpen: boolean) {
+    this.menuOpen = isOpen;
   }
 }

@@ -1,20 +1,20 @@
 <section>
       <div class="burger-menu">
     <div class="mobile-about-me">
-      <a href="#aboutMe">ÜBER MICH</a>
+      <a (click)="closeMenu()" href="#aboutMe">ÜBER MICH</a>
     </div>
     <div class="mobile-skills">
-      <a href="#skills"> SKILLS</a>
+      <a (click)="closeMenu()" href="#skills"> SKILLS</a>
     </div>
     <div class="mobile-projects">
-      <a href="#projects">PROJEKTE</a>
+      <a (click)="closeMenu()" href="#projects">PROJEKTE</a>
     </div>
     <div class="mobile-contact">
-      <a href="#contact">KONTAKT</a>
+      <a (click)="closeMenu()" href="#contact">KONTAKT</a>
     </div>
     <div class="languageSwitch">
     <p>DE</p>
-    <div><input class="switch" type="checkbox" ></div>
+    <div><input class="switch" type="checkbox" [checked]="isEnglish" (change)="onLanguageChange($event)"></div>
     <p>EN</p>
   </div>
     <div class="hero-links-bar">
@@ -41,4 +41,4 @@
 </section>
 
 
-<!-- [checked]="isEnglish" (change)="onLanguageChange($event)" -->
+
