@@ -4,6 +4,7 @@ import {
   TranslatePipe,
   TranslateService,
 } from '@ngx-translate/core';
+import { LanguageService } from '../services/language.service';
 
 @Component({
   selector: 'app-header',
@@ -13,36 +14,28 @@ import {
   styleUrl: './header.component.scss',
 })
 export class HeaderComponent {
-  constructor(private translate: TranslateService) {}
+  isMenuOpen = false;
   isEnglish = false;
+  @Output() toggleMenu = new EventEmitter<boolean>();
+
+  constructor(private languageService: LanguageService) {
+    this.languageService.isEnglish$.subscribe(
+      isEnglish => this.isEnglish = isEnglish
+    );
+  }
 
   onLanguageChange(event: Event) {
     const checkbox = event.target as HTMLInputElement;
-    if (checkbox.checked) {
-      this.setEnglish();
-    } else {
-      this.setGerman();
-    }
+    this.languageService.toggleLanguage(checkbox.checked);
   }
 
-  private setEnglish() {
-    this.translate.use('en');
-  }
-
-  private setGerman() {
-    this.translate.use('de');
+  onMenuToggle() {
+    this.isMenuOpen = !this.isMenuOpen;
+    this.toggleMenu.emit(this.isMenuOpen);
   }
 
   resetBurgerMenu() {
     this.isMenuOpen = false;
     this.toggleMenu.emit(false);
-  }
-
-  isMenuOpen = false;
-  @Output() toggleMenu = new EventEmitter<boolean>();
-
-  onMenuToggle() {
-    this.isMenuOpen = !this.isMenuOpen;
-    this.toggleMenu.emit(this.isMenuOpen);
   }
 }
