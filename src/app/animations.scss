@@ -177,6 +177,42 @@
   }
 }
 
+@keyframes zoomOutBackroundImage {
+  0% {
+    background-size: 110%;
+  }
+  10% {
+    background-size: 109%;
+  }
+  20% {
+    background-size: 108%;
+  }
+  30% {
+    background-size: 107%;
+  }
+  40% {
+    background-size: 106%;
+  }
+  50% {
+    background-size: 105%;
+  }
+  60% {
+    background-size: 104%;
+  }
+  70% {
+    background-size: 103%;
+  }
+  80% {
+    background-size: 102%;
+  }
+  90% {
+    background-size: 101%;
+  }
+  100% {
+    background-size: cover;
+  }
+}
+
 @keyframes photoLightning {
   0% {
     filter: grayscale(1);

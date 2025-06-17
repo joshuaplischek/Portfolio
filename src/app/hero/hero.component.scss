@@ -260,11 +260,10 @@ app-header {
   }
 }
 
-@media (min-width: 920px){
-  app-burger-menu{
+@media (min-width: 920px) {
+  app-burger-menu {
     display: none;
   }
-
 }
 
 @media (max-width: 720px) {
@@ -297,6 +296,11 @@ app-header {
 }
 
 @media (max-width: 610px) {
+  #hero {
+    > .hero-title-content {
+      height: 500px;
+    }
+  }
   #developer {
     > div {
       font-size: 70px;
@@ -327,19 +331,19 @@ app-header {
   position: relative;
   display: block;
 
-app-burger-menu {
-  position: fixed;
-  top: -100%;
-  right: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(20, 29, 47, 0);
-  backdrop-filter: blur(8px);
-  z-index: 20;
-  transition: all 0.4s ease-in-out;
+  app-burger-menu {
+    position: fixed;
+    top: -100%;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(20, 29, 47, 0);
+    backdrop-filter: blur(8px);
+    z-index: 20;
+    transition: all 0.4s ease-in-out;
 
-  &.open {
-    top: 0;
+    &.open {
+      top: 0;
+    }
   }
-}
 }

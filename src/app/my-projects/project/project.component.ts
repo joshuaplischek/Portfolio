@@ -14,4 +14,18 @@ export class ProjectComponent {
   @Input() title: string = '';
   @Input() description: string = '';
   @Input() projectLink: string = '';
+
+  onMouseEnterAnimation(element: HTMLElement) {
+    if (window.matchMedia('(min-width: 950px)').matches) {
+      element.classList.remove('zoomOut');
+      element.classList.add('zoomIn');
+    }
+  }
+
+  onMouseLeaveAnimation(element: HTMLElement) {
+    if (window.matchMedia('(min-width: 950px)').matches) {
+      element.classList.remove('zoomIn');
+      element.classList.add('zoomOut');
+    }
+  }
 }

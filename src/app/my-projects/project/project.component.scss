@@ -2,6 +2,8 @@
 @import "./../../animations.scss";
 
 .project-card {
+  margin-bottom: 45px;
+
   height: 600px;
   width: 700px;
   display: flex;
@@ -44,10 +46,13 @@
       }
     }
     &:hover {
-      cursor: pointer;
-      animation: zoomBackroundImage 0.3s forwards alternate;
       > .project-overlay {
         opacity: 1;
+      }
+      @media (max-width: 950px) {
+        .project-overlay {
+          opacity: 0;
+        }
       }
     }
   }
@@ -66,8 +71,37 @@
   }
 }
 
+.mobile-button {
+  padding: 10px 50px;
+  width: 100%;
+  display: flex;
+  justify-content: end;
+  > button {
+    color: rgb(0, 0, 0);
+    font-size: 16px;
+    height: 40px;
+    width: 140px;
+    border: 1px solid rgb(0, 0, 0);
+    background-color: rgba(255, 255, 255, 0);
+    border-radius: 25px;
+    box-shadow: 2px 2px 1px 1px rgb(0, 0, 0);
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
+
+.zoomIn {
+  animation: zoomBackroundImage 0.3s forwards alternate;
+}
+
+.zoomOut {
+  animation: zoomOutBackroundImage 0.3s forwards alternate;
+}
+
 @media (max-width: 720px) {
   .project-card {
+    margin: 0;
     width: 100%;
     > .project-image {
       width: 500px;
@@ -95,5 +129,8 @@
     > .project-description {
       padding: 0 25px;
     }
+  }
+  .mobile-button{
+    padding: 0 25px;
   }
 }
