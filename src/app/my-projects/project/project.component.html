@@ -1,13 +1,13 @@
 <div #card  class="project-card" >
     <div #img  class="project-image" [ngStyle]="{'background-image': 'url(\'' + image + '\')'}" (mouseenter)="onMouseEnterAnimation(img)" (mouseleave)="onMouseLeaveAnimation(img)">
         <div #overlay class="project-overlay">
-            <button [routerLink]="projectLink">{{'projects.button' | translate }}</button>
+            <button #btn (mouseenter)="onMouseEnterButton(btn)" (mouseleave)="onMouseLeaveButton(btn)" [routerLink]="projectLink">{{'projects.button' | translate }}</button>
         </div>
     </div>
     <div class="project-title"><h3>{{title}}</h3></div>
     <div class="project-description"><p>{{description}}</p></div>
     <div class="mobile-button">
-        <button [routerLink]="projectLink">{{'projects.button' | translate }}</button>
+        <button #btnMobile (mouseenter)="onMouseEnterButton(btnMobile)" (mouseleave)="onMouseLeaveButton(btnMobile)" [routerLink]="projectLink">{{'projects.button' | translate }}</button>
     </div>
 </div>
 

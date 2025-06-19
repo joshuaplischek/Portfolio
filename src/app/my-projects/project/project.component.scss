@@ -52,6 +52,7 @@
       @media (max-width: 950px) {
         .project-overlay {
           opacity: 0;
+          display: none;
         }
       }
     }
@@ -74,7 +75,7 @@
 .mobile-button {
   padding: 10px 50px;
   width: 100%;
-  display: flex;
+  display: none;
   justify-content: end;
   > button {
     color: rgb(0, 0, 0);
@@ -97,6 +98,20 @@
 
 .zoomOut {
   animation: zoomOutBackroundImage 0.3s forwards alternate;
+}
+
+.btn-hover {
+  animation: pushButtonNeutral 0.1s forwards alternate;
+}
+
+.btn-unhover {
+  animation: dontPushButtonAnymoreNeutral 0.1s forwards alternate;
+}
+
+@media (max-width: 950px) {
+  .mobile-button {
+    display: flex;
+  }
 }
 
 @media (max-width: 720px) {
@@ -130,7 +145,7 @@
       padding: 0 25px;
     }
   }
-  .mobile-button{
+  .mobile-button {
     padding: 0 25px;
   }
 }

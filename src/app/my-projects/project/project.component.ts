@@ -28,4 +28,14 @@ export class ProjectComponent {
       element.classList.add('zoomOut');
     }
   }
+
+  onMouseEnterButton(element: HTMLElement) {
+    element.classList.add('btn-hover');
+    element.classList.remove('btn-unhover');
+  }
+
+  onMouseLeaveButton(element: HTMLElement) {
+    element.classList.remove('btn-hover');
+    element.classList.add('btn-unhover');
+  }
 }
