@@ -40,6 +40,15 @@ footer {
   }
 }
 
+.legal-notice{
+  >p {
+    &:hover{
+      cursor: pointer;
+      color: $portfolioBlue;
+    }
+  }
+}
+
 .animate-in {
   ~ .linkImg {
     opacity: 1;
