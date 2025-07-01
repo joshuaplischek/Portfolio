@@ -264,5 +264,16 @@
     "p_156_wir": "Wir bitten Sie, sich regelmäßig über den Inhalt unserer\n      Datenschutzerklärung zu informieren. Wir passen die Datenschutzerklärung\n      an, sobald die Änderungen der von uns durchgeführten Datenverarbeitungen\n      dies erforderlich machen. Wir informieren Sie, sobald durch die Änderungen\n      eine Mitwirkungshandlung Ihrerseits (z. B. Einwilligung) oder eine\n      sonstige individuelle Benachrichtigung erforderlich wird.",
     "p_157_sofern": "Sofern wir in dieser Datenschutzerklärung Adressen und\n      Kontaktinformationen von Unternehmen und Organisationen angeben, bitten\n      wir zu beachten, dass die Adressen sich über die Zeit ändern können und\n      bitten die Angaben vor Kontaktaufnahme zu prüfen.",
     "p_158_erstellt": "Erstellt mit kostenlosem Datenschutz-Generator.de von Dr. Thomas\n        Schwenke"
+  },
+  "legal-notice": {
+    "legal-notice": "Impressum",
+    "informations": "Angaben gemäß § 5 TMG",
+    "owner": "Joshua Plischek",
+    "street-adress": "Raiffeisenstraße 10A",
+    "adress-city": "57610 Altenkirchen",
+    "country": "Deutschland",
+    "contact": "Kontakt",
+    "e-mail": "E-mail",
+    "mail": "plischekjoshua@web.de"
   }
 }
