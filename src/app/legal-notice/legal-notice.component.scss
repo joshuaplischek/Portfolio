@@ -9,6 +9,8 @@ section {
     background-size: cover;
     padding: 0 25px;
 
+
+
     >div {
         text-align: center;
         display: flex;
@@ -19,6 +21,9 @@ section {
         color: white;
         gap: 10px;
 
+        >h1{
+            font-size: 3rem;
+        }
         >div {
             text-align: center;
             display: flex;
@@ -31,7 +36,7 @@ section {
 }
 
 app-header {
-  width: 100%;
-  z-index: 21;
-  padding: 0 25px;
+    width: 100%;
+    z-index: 21;
+    padding: 0 25px;
 }
