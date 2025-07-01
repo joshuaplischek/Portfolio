@@ -15,15 +15,18 @@ app-header {
   color: white;
   display: flex;
   flex-direction: column;
-  > .hero-title-content {
+
+  >.hero-title-content {
     @include flexCenterAll;
     flex-direction: column;
     width: 100%;
     height: 700px;
     padding: 0 25px;
-    > div {
+
+    >div {
       width: 900px;
     }
+
     #helloWorld {
       height: 50px;
 
@@ -32,6 +35,7 @@ app-header {
         left: 80px;
         transition: all 0.3s ease;
       }
+
       .helloWorldText {
         @include flexCenterAll;
         height: 40px;
@@ -47,7 +51,8 @@ app-header {
 
     #getInTouch {
       text-align: end;
-      > button {
+
+      >button {
         color: white;
         font-size: 16px;
         height: 40px;
@@ -56,6 +61,7 @@ app-header {
         background-color: rgba(255, 255, 255, 0);
         border-radius: 25px;
         box-shadow: 2px 2px 1px 1px white;
+
         &:hover {
           cursor: pointer;
         }
@@ -83,7 +89,8 @@ app-header {
   display: flex;
   justify-content: space-evenly;
   gap: 100px;
-  > div {
+
+  >div {
     width: 57.67px;
   }
 }
@@ -94,17 +101,19 @@ app-header {
   flex-direction: column;
   gap: 10px;
 
-  > div {
+  >div {
     @include flexCenterAll;
     height: 40px;
     width: 40px;
     border: solid 1px white;
     border-radius: 100%;
     transition: 0.5s ease;
+
     &:hover {
       background-color: $portfolioBlue;
     }
-    > a {
+
+    >a {
       display: flex;
       justify-content: center;
       align-items: center;
@@ -121,11 +130,13 @@ app-header {
   color: black;
   display: none;
   rotate: 10deg;
-  > img {
+
+  >img {
     height: 240px;
     width: auto;
   }
-  > p {
+
+  >p {
     top: -45px;
     left: 10px;
     width: 80px;
@@ -140,11 +151,13 @@ app-header {
 #frontEndImageContainer {
   display: flex;
   justify-content: space-between;
-  > p {
+
+  >p {
     font-size: 140px;
     font-weight: bold;
   }
 }
+
 #photoCard {
   rotate: 10deg;
   height: 240px;
@@ -154,7 +167,8 @@ app-header {
   right: 25px;
   background-color: white;
   color: black;
-  > img {
+
+  >img {
     height: 240px;
     width: auto;
     filter: grayscale(1);
@@ -163,7 +177,8 @@ app-header {
       animation: 0.3s photoLightning ease forwards;
     }
   }
-  > p {
+
+  >p {
     top: -45px;
     left: 75px;
     width: 80px;
@@ -179,16 +194,18 @@ app-header {
   font-weight: bold;
   transition: all 0.1s ease;
   cursor: default;
-  > div {
+
+  >div {
     display: inline-block;
     transition: all 0.1s ease;
   }
-  > div.upper:hover {
+
+  >div.upper:hover {
     color: $portfolioYellow;
     text-transform: lowercase;
   }
 
-  > div.lower:hover {
+  >div.lower:hover {
     color: $portfolioYellow;
     text-transform: uppercase;
   }
@@ -197,15 +214,18 @@ app-header {
 .animate-in {
   animation: slideOut 0.5s ease forwards;
   cursor: default;
-  ~ .helloImage {
+
+  ~.helloImage {
     opacity: 1;
     animation: rotateIn 1s ease forwards;
   }
-  > p {
+
+  >p {
     transition: 0.3s;
     opacity: 0;
     transition-delay: 0.15s;
   }
+
   #myNameIs {
     opacity: 1;
     transition-delay: 0.15s;
@@ -215,15 +235,16 @@ app-header {
 .animate-out {
   animation: slideIn 0.5s ease forwards;
 
-  ~ .helloImage {
+  ~.helloImage {
     animation: rotateOut 0.8s ease forwards;
   }
 }
 
 .fade {
-  ~ .helloImage {
+  ~.helloImage {
     opacity: 0;
   }
+
   #myNameIs {
     opacity: 0;
   }
@@ -236,25 +257,29 @@ app-header {
 @media (max-width: 950px) {
   #hero {
     .hero-title-content {
-      > div {
+      >div {
         width: 700px;
       }
     }
   }
+
   #frontEndImageContainer {
-    > div {
+    >div {
       font-size: 100px;
       font-weight: bold;
     }
-    > #photoCard {
+
+    >#photoCard {
       top: -120px;
-      > p {
+
+      >p {
         top: -65px;
       }
     }
   }
+
   #developer {
-    > div {
+    >div {
       font-size: 100px;
     }
   }
@@ -269,8 +294,9 @@ app-header {
 @media (max-width: 720px) {
   #hero {
     align-items: center;
+
     .hero-title-content {
-      > div {
+      >div {
         width: 100%;
       }
     }
@@ -279,6 +305,7 @@ app-header {
   #frontEndImageContainer {
     justify-content: center;
   }
+
   #developer {
     text-align: center;
   }
@@ -286,6 +313,7 @@ app-header {
   #photoCard {
     display: none;
   }
+
   .photoCard-mobile {
     display: flex;
   }
@@ -297,17 +325,21 @@ app-header {
 
 @media (max-width: 610px) {
   #hero {
-    > .hero-title-content {
+    >.hero-title-content {
       height: 500px;
+      padding: 75px 25px;
+      justify-content: start;
     }
   }
+
   #developer {
-    > div {
+    >div {
       font-size: 70px;
     }
   }
+
   #frontEndImageContainer {
-    > div {
+    >div {
       font-size: 70px;
       font-weight: bold;
     }
@@ -315,13 +347,20 @@ app-header {
 }
 
 @media (max-width: 450px) {
+  #hero{
+    height: 750px;
+  }
   #developer {
-    > div {
+    >div {
       font-size: 45px;
     }
   }
+  .photoCard-mobile {
+    top: -100px;
+  }
+
   #frontEndImageContainer {
-    > div {
+    >div {
       font-size: 45px;
     }
   }
