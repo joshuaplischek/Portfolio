@@ -1,12 +1,11 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
-import { HeaderComponent } from "../header/header.component";
 import { TranslatePipe, TranslateService } from '@ngx-translate/core';
 import { LanguageService } from '../services/language.service';
 
 
 @Component({
   selector: 'app-burger-menu',
-  imports: [ TranslatePipe],
+  imports: [TranslatePipe],
   templateUrl: './burger-menu.component.html',
   styleUrl: './burger-menu.component.scss'
 })
