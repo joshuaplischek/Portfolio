@@ -23,7 +23,7 @@ interface ContactData {
 export class ContactComponent {
   http = inject(HttpClient);
   isSubmitting = false;
-  mailTest = true;
+  mailTest = false;
 
   onMouseEnterBtn(element: HTMLElement) {
     element.classList.remove('animate-dont-push');
@@ -43,7 +43,7 @@ export class ContactComponent {
   };
 
   post = {
-    endPoint: 'https://deineDomain.de/sendMail.php',
+    endPoint: 'https://joshuaplischek.de/sendMail.php',
     body: (payload: ContactData) => JSON.stringify(payload), // Typ spezifizieren
     options: {
       headers: {
