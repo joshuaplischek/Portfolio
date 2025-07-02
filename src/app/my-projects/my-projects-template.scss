@@ -6,27 +6,36 @@ section {
   height: 100vh;
   width: 100%;
   background-image: url("/assets/img/my-projects/backround/Note book paper.png");
+  background-attachment: fixed;
   background-position: left;
   background-size: cover;
   background-color: #1d1d1d;
   padding: 0 50px;
+  @media(max-width: 750px) {
+    background-size: 200%;;
+  }
 }
 
-#goBack, #goBackMobile {
+#goBack,
+#goBackMobile {
   display: flex;
   justify-content: start;
   align-items: center;
   height: 100px;
   gap: 10px;
-  > img {
+
+  >img {
     height: 35px;
     width: auto;
+
     &:hover {
       cursor: pointer;
     }
   }
-  > p {
+
+  >p {
     font-weight: bold;
+
     &:hover {
       cursor: pointer;
       color: $portfolioOrange;
@@ -41,99 +50,126 @@ app-project-template {
   align-items: center;
 }
 
-#goNext, #goNextMobile {
+#goNext,
+#goNextMobile {
   display: flex;
   justify-content: end;
   align-items: center;
   color: white;
   height: 100px;
   gap: 10px;
-  > img {
+
+  >img {
     height: 35px;
     width: auto;
+
     &:hover {
       cursor: pointer;
     }
   }
-  > p {
+
+  >p {
     font-weight: bold;
+
     &:hover {
       cursor: pointer;
       color: $portfolioYellow;
     }
   }
+
+  @media (max-width: 1100px) {
+      >p {
+        color: black;
+      }
+  }
 }
 
-.mobile-navigation{
+#goNextMobile,
+#goBackMobile {
+  p {
+    color: black;
+  }
+}
+
+.mobile-navigation {
   display: none;
 }
 
 
 @media (max-width: 1100px) {
-  section{
+  section {
     height: 100%;
     background-position: top center;
     background-size: 150%;
     background-image: url('/assets/img/my-projects/backround/Note book paper - mobile.png');
   }
+
+
 }
 
 @media (max-width: 940px) {
-  #goBack, #goNext {
+
+  #goBack,
+  #goNext {
     display: none;
   }
-  .mobile-navigation{
+
+  .mobile-navigation {
     width: 100%;
     display: flex;
     justify-content: space-between;
-    >div{
-      >p{
+
+    >div {
+      >p {
         color: white;
       }
     }
-    
+
   }
 }
 
-@media (max-width: 600px){
-    section{
+@media (max-width: 780px) {
+  section {
     background-size: 220%;
   }
 }
 
-@media (max-width: 474px){
-    section{
+
+@media (max-width: 600px) {
+  section {
+    background-size: 220%;
+  }
+}
+
+@media (max-width: 510px) {
+  section {
     background-size: 300%;
   }
 }
 
-@media (max-width: 400px){
-    section{
+@media (max-width: 400px) {
+  section {
     background-size: 350%;
   }
-    .mobile-navigation{
-    >div{
-      >p{
+
+  .mobile-navigation {
+    >div {
+      >p {
         display: none;
       }
     }
-    
+
   }
 }
 
-@media (max-width: 370px){
-    section{
+@media (max-width: 370px) {
+  section {
     background-size: 400%;
   }
 }
 
-@media (max-width: 340px){
-    section{
+@media (max-width: 340px) {
+  section {
     background-size: 500%;
   }
 }
-
-
-
-
-

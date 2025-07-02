@@ -1,8 +1,31 @@
-section{
+section {
     display: flex;
     flex-direction: column;
+    background-image: url(/assets/img/hero/backround/ripped-paper.png);
+    background-position: top;
+    background-attachment: fixed;
+    background-size: 150%;
+    color: white;
+
+
+    >div {
+
+        >h1{
+            font-size: 54px;
+        }
+        >p{
+            margin: 10px 0;
+        }
+        >h2 {
+            margin: 25px 0;
+        }
+
+        >h3 {
+            margin: 10px 0;
+        }
+    }
 }
 
-.privacy-policy-content{
+.privacy-policy-content {
     padding: 0 50px;
 }
