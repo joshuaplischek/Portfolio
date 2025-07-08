@@ -1,5 +1,7 @@
 <section>
-  <app-header></app-header>
+<app-header #header (toggleMenu)="onToggleMenu($event)"></app-header>
+  <app-burger-menu  [class.open]="menuOpen"
+  (menuClose)="closeMenu(header)"></app-burger-menu>
   <div class="privacy-policy-content">
     <h1>📄{{ "privacy-policy.h1_1_datenschutzerklärung" | translate }}</h1>
     <h2 id="m716">{{ "privacy-policy.h2_2_präambel" | translate }}</h2>
