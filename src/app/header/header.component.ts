@@ -19,6 +19,7 @@ export class HeaderComponent {
   @Output() toggleMenu = new EventEmitter<boolean>();
 
   constructor(private languageService: LanguageService) {
+
     this.languageService.isEnglish$.subscribe(
       isEnglish => this.isEnglish = isEnglish
     );

@@ -1,5 +1,7 @@
 <section>
-  <app-header></app-header>
+  <app-header #header (toggleMenu)="onToggleMenu($event)"></app-header>
+  <app-burger-menu   [class.open]="menuOpen"
+  (menuClose)="closeMenu(header)"></app-burger-menu>
   <div id="goBack">
     <img
       [routerLink]="['/']"

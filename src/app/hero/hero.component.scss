@@ -92,6 +92,7 @@ app-header {
 
   >div {
     width: 57.67px;
+    left: 1%;
   }
 }
 
@@ -323,7 +324,7 @@ app-header {
   }
 }
 
-@media (max-width: 610px) {
+@media (max-width: 630px) {
   #hero {
     >.hero-title-content {
       height: 500px;
@@ -346,7 +347,7 @@ app-header {
   }
 }
 
-@media (max-width: 450px) {
+@media (max-width: 460px) {
   #hero{
     height: 750px;
   }

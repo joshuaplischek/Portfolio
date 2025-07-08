@@ -51,3 +51,9 @@ app-header {
       top: 0;
     }
   }
+
+  @media (min-width: 920px) {
+  app-burger-menu {
+    display: none;
+  }
+}
