@@ -20,66 +20,32 @@
         <div class="contact-container">
           <div>
             <div>
-              <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
+              <form (ngSubmit)="onSubmit(contactForm, button, contactForm)" #contactForm="ngForm">
                 <div id="nameInput" class="border inputs">
                   <label for="">{{ 'contact.name' | translate }}</label>
-                  <input
-                    #name="ngModel"
-                    [(ngModel)]="contactData.name"
-                    type="text"
-                    id="name"
-                    name="name"
-                    [placeholder]="'contact.name-tipp' | translate"
-                    required
-                  />
-                  @if (name.invalid && name.touched) {
-                  <div class="error-message">
-                    <p>{{ 'contact.name-error' | translate }}</p>
-                  </div>
+                  <input #name="ngModel" [(ngModel)]="contactData.name" type="text" id="name" name="name" [placeholder]="'contact.name-tipp' | translate" required/>
+                  @if (!name.valid && name.touched && !name.disabled) {
+                    <span>{{'formError.name' | translate }}</span> <!-- translation in de/ en json  -->
                   }
                 </div>
 
                 <div id="mailInput" class="border inputs">
                   <label for="">{{ 'contact.email' | translate }}</label>
-                  <input
-                    #email="ngModel"
-                    [(ngModel)]="contactData.email"
-                    type="email"
-                    id="email"
-                    name="email"
-                    [placeholder]="'contact.email-tipp' | translate"
-                    required
-                    pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}"
-                  />
-                  @if (email.invalid && email.touched) {
-                  <div class="error-message">
-                    <p>{{ 'contact.email-error' | translate }}</p>
-                  </div>
+                  <input #email="ngModel" [(ngModel)]="contactData.email" type="email" id="email" name="email" [placeholder]="'contact.email-tipp' | translate" required pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}"/>
+                  @if (!email.valid && email.touched && !email.disabled) {
+                    <span>{{'formError.email' | translate }}</span> <!-- translation in de/ en json  -->
                   }
                 </div>
 
                 <div id="textInput" class="border text-message-div inputs">
                   <label for="">{{ 'contact.message' | translate }}</label>
-                  <textarea
-                    #message="ngModel"
-                    minlength="4"
-                    [(ngModel)]="contactData.message"
-                    type="text"
-                    id="message"
-                    name="message"
-                    [placeholder]="'contact.message-tipp' | translate"
-                    required
-                  ></textarea>
-                  @if (!message.valid && message.touched) { }
+                  <textarea #message="ngModel" minlength="4" [(ngModel)]="contactData.message" type="text" id="message" name="message" [placeholder]="'contact.message-tipp' | translate" required></textarea>
+                  @if (!message.valid && message.touched && !message.disabled) {
+                    <span>{{'formError.message' | translate }}</span> <!-- translation in de/ en json  -->
+                  }
                 </div>
                 <div class="privacy-policy">
-                  <input
-                    type="checkbox"
-                    required
-                    #privacy="ngModel"
-                    [(ngModel)]="contactData.privacyAccepted"
-                    name="privacy"
-                  />
+                  <input #checked="ngModel" [(ngModel)]="contactData.privacy" type="checkbox" name="privacy"/>
                   <p>
                     {{ 'contact.privacy_policy_start' | translate }}
                     <a [routerLink]="['/privacy-policy']">
@@ -87,6 +53,12 @@
                     </a>
                     {{ "contact.privacy_policy_end" | translate }}
                   </p>
+                </div>
+                @if (!checked.valid && !checked.disabled ) {
+                    <span>{{'formError.check' | translate }}</span> <!-- translation in de/ en json  -->
+                  }
+                <div class="send">
+                  <input #button (mouseenter)="onMouseEnterBtn(button, contactForm)" (mouseleave)="onMouseLeaveBtn(button, contactForm)" type="submit" value="{{ 'contact.button' | translate }}" [disabled]="!contactForm.valid || !contactData.privacy">
                 </div>
               </form>
             </div>
@@ -100,18 +72,6 @@
             alt="animated arrow"
           />
         </div>
-        <div class="send">
-          <button
-            #button
-            type="submit"
-            value="submit"
-            [disabled]="!contactForm.valid || isSubmitting"
-            (mouseenter)="onMouseEnterBtn(button)"
-            (mouseleave)="onMouseLeaveBtn(button)"
-          >
-            {{ 'contact.button' | translate }}
-          </button>
-        </div>
       </div>
       <div class="site-owner">
         <a href="#hero"><img src="/assets/img/logo/logo_blue.png" alt="" /></a>
@@ -121,3 +81,5 @@
   </div>
   <app-footer></app-footer>
 </section>
+
+

@@ -7,10 +7,10 @@ import { TranslatePipe } from '@ngx-translate/core';
 import { RouterModule } from '@angular/router';
 
 interface ContactData {
+privacy: boolean;
   name: string;
   email: string;
   message: string;
-  privacyAccepted: boolean;
 }
 
 @Component({
@@ -25,65 +25,54 @@ export class ContactComponent {
   isSubmitting = false;
   mailTest = false;
 
-  onMouseEnterBtn(element: HTMLElement) {
+onMouseEnterBtn(element: HTMLElement, form: NgForm) {
+  if (form.valid && this.contactData.privacy) {
     element.classList.remove('animate-dont-push');
     element.classList.add('animate-push');
   }
+}
 
-  onMouseLeaveBtn(element: HTMLElement) {
+onMouseLeaveBtn(element: HTMLElement, form: NgForm) {
+  if (form.valid && this.contactData.privacy) {
     element.classList.remove('animate-push');
     element.classList.add('animate-dont-push');
   }
+}
 
   contactData: ContactData = {
     name: '',
     email: '',
     message: '',
-    privacyAccepted: false,
+    privacy: false
   };
 
   post = {
     endPoint: 'https://joshuaplischek.de/sendMail.php',
-    body: (payload: ContactData) => JSON.stringify(payload), // Typ spezifizieren
+    body: (payload: any) => JSON.stringify(payload),
     options: {
       headers: {
-        'Content-Type': 'application/json', // auf application/json ändern
+        'Content-Type': 'text/plain',
+        responseType: 'text',
       },
     },
   };
 
-  onSubmit(ngForm: NgForm) {
-    // Alle Felder als berührt markieren, unabhängig von der Validität
-    Object.keys(ngForm.controls).forEach((key) => {
-      const control = ngForm.controls[key];
-      control.markAsTouched();
-    });
-  
-    if (!ngForm.valid) {
-      return; // Hier früh aussteigen wenn das Formular nicht valid ist
-    }
-  
-    this.isSubmitting = true;
-  
-    if (!this.mailTest) { // Prüfung auf ngForm.submitted entfernt
-      this.http
-        .post(
-          this.post.endPoint,
-          this.post.body(this.contactData),
-          this.post.options
-        )
+  onSubmit(ngForm: NgForm, element: HTMLElement, form: NgForm) {
+    if (ngForm.submitted && ngForm.form.valid && !this.mailTest) {
+      this.http.post(this.post.endPoint, this.post.body(this.contactData))
         .subscribe({
           next: (response) => {
-            console.info('Mail sent successfully');
+            this.onMouseLeaveBtn(element, form)
             ngForm.resetForm();
-            this.isSubmitting = false;
           },
           error: (error) => {
-            console.error('Error sending mail:', error);
-            this.isSubmitting = false;
+            console.error(error);
           },
           complete: () => console.info('send post complete'),
         });
+    } else if (ngForm.submitted && ngForm.form.valid && this.mailTest) {
+
+      ngForm.resetForm();
     }
   }
 }

@@ -1,5 +1,6 @@
 @import "./../../styles.scss";
 @import "./../animations.scss";
+
 section {
   width: 100%;
   height: 100%;
@@ -11,21 +12,24 @@ section {
   background-position: top;
   background-size: cover;
   color: white;
-  > div {
+
+  >div {
     width: 1200px;
     height: 100%;
     display: flex;
     justify-content: space-around;
     align-items: center;
     padding: 25px 100px;
-    > div {
+
+    >div {
       display: flex;
       flex-direction: column;
       justify-content: space-evenly;
       height: 800px;
       width: 100%;
       padding: 50px;
-      > div {
+
+      >div {
         gap: 25px;
       }
     }
@@ -36,21 +40,26 @@ section {
   width: 100%;
   justify-content: space-between;
   display: flex;
-  > div {
+
+  >div {
     width: 500px;
-    > p {
+
+    >p {
       font-size: 20px;
     }
-    > h2 {
+
+    >h2 {
       font-size: 54px;
     }
-    > img {
+
+    >img {
       height: 170px;
       width: 170px;
       rotate: 70deg;
     }
   }
-  > .logoSticker {
+
+  >.logoSticker {
     display: flex;
     justify-content: end;
     align-items: center;
@@ -61,18 +70,20 @@ section {
   height: 350px;
   display: flex;
   justify-content: space-between;
-  > div {
+
+  >div {
     width: 500px;
   }
 }
 
 .contact-container {
-  > div {
+  >div {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     gap: 25px;
-    > div {
+
+    >div {
       display: flex;
       flex-direction: column;
       gap: 25px;
@@ -88,9 +99,10 @@ section {
 
 .site-owner {
   a {
-    > img {
+    >img {
       height: 50px;
       transition: 0.5s ease-in-out;
+
       &:hover {
         filter: invert(1);
       }
@@ -101,16 +113,20 @@ section {
 form {
   display: flex;
   flex-direction: column;
-  > #mailInput {
+
+  >#mailInput {
     top: -1px;
   }
-  > #textInput {
+
+  >#textInput {
     top: -2px;
   }
-  > div {
-    > p {
-      > a {
+
+  >div {
+    >p {
+      >a {
         color: $portfolioBlue;
+
         &:hover {
           text-decoration: underline;
           color: $portfolioOrange;
@@ -118,43 +134,39 @@ form {
       }
     }
   }
-  > .inputs {
+
+  >.inputs {
     height: 80px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     gap: 10px;
 
-    > label {
+    >label {
       font-size: 20px;
     }
-    > textarea {
+
+    >textarea {
       background-color: transparent;
       border: 0;
       color: white;
       transition: all 0.2s ease-in-out;
       transform: ease-in-out all 0.2s;
       resize: none;
+
     }
-    > input {
+
+    >input {
       color: white;
       background-color: rgba(0, 0, 0, 0);
       border: 0;
     }
   }
-  > .text-message-div {
-    transition: all 0.2s ease-in-out;
-    &:hover {
-      height: 140px;
-      > textarea {
-        transition: all 0.2s ease-in-out;
-        height: 80px;
-      }
-    }
-  }
-  > .border {
+
+  >.border {
     border-bottom: 1px solid $portfolioYellow;
     border-top: 1px solid transparent;
+
     &:hover {
       z-index: 1;
       border-top: 1px $portfolioBlue solid;
@@ -162,7 +174,7 @@ form {
     }
   }
 
-  > .privacy-policy {
+  >.privacy-policy {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -196,7 +208,8 @@ app-footer {
   flex-direction: column;
   align-items: end;
   border-top: 0;
-  > button {
+
+  >input {
     color: rgb(255, 255, 255);
     font-size: 16px;
     height: 40px;
@@ -205,8 +218,19 @@ app-footer {
     background-color: rgba(255, 255, 255, 0);
     border-radius: 25px;
     box-shadow: 2px 2px 1px 1px rgb(255, 255, 255);
+    z-index: 2;
+
     &:hover {
       cursor: pointer;
+    }
+
+    &:disabled {
+      background-color: #cccccc;
+      color: #888888;
+      border: 1px solid #cccccc;
+      box-shadow: none;
+      cursor: not-allowed;
+      opacity: 0.7;
     }
   }
 }
@@ -241,9 +265,10 @@ app-footer {
     margin-left: 24px;
   }
 }
+
 @media (max-width: 1220px) {
   section {
-    > div {
+    >div {
       width: 100%;
     }
   }
@@ -251,7 +276,7 @@ app-footer {
 
 @media (max-width: 1200px) {
   section {
-    >div{
+    >div {
       padding: 0 25px;
     }
   }
@@ -259,7 +284,7 @@ app-footer {
 
 @media (max-width: 1000px) {
   section {
-        >div{
+    >div {
       padding: 0;
     }
   }
@@ -268,7 +293,8 @@ app-footer {
 @media (max-width: 950px) {
   section {
     height: 100%;
-    > div {
+
+    >div {
       height: 100%;
       flex-direction: column;
     }
@@ -278,31 +304,38 @@ app-footer {
 @media (max-width: 800px) {
   section {
     height: 100%;
-    > div {
+
+    >div {
       height: 100%;
-      > div {
+
+      >div {
         gap: 50px;
         height: 100%;
       }
     }
   }
+
   .contact-text-and-form {
     display: flex;
     height: auto;
     align-items: center;
     flex-direction: column;
     justify-content: space-between;
-    > div {
+
+    >div {
       width: 100%;
     }
   }
+
   .arrow {
     justify-content: flex-start;
   }
+
   form {
     .text-message-div {
       height: 140px;
-      > textarea {
+
+      >textarea {
         height: 80px;
       }
     }
@@ -312,10 +345,12 @@ app-footer {
 @media (max-width: 740px) {
   .contact-heading {
     flex-direction: column-reverse;
-    > .logoSticker {
+
+    >.logoSticker {
       width: 100%;
     }
   }
+
   .arrow {
     width: 100%;
   }
@@ -324,17 +359,21 @@ app-footer {
 @media (max-width: 570px) {
   .arrow {
     width: 100%;
-    > img {
+
+    >img {
       width: 100px;
     }
   }
+
   .contact-heading {
     width: 100%;
     justify-content: space-between;
     display: flex;
-    > div {
+
+    >div {
       width: 100%;
-      > h2 {
+
+      >h2 {
         font-size: 36px;
       }
     }
@@ -343,8 +382,8 @@ app-footer {
 
 @media (max-width: 370px) {
   section {
-    > div {
-      > div {
+    >div {
+      >div {
         padding: 0 25px;
       }
     }
@@ -352,17 +391,21 @@ app-footer {
 
   .arrow {
     width: 100%;
-    > img {
+
+    >img {
       width: 100px;
     }
   }
+
   .contact-heading {
     width: 100%;
     justify-content: space-between;
     display: flex;
-    > div {
+
+    >div {
       width: 100%;
-      > h2 {
+
+      >h2 {
         font-size: 24px;
       }
     }
