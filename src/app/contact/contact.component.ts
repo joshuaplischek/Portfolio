@@ -52,7 +52,7 @@ onMouseLeaveBtn(element: HTMLElement, form: NgForm) {
     options: {
       headers: {
         'Content-Type': 'text/plain',
-        responseType: 'text',
+        responseType: 'text as const',
       },
     },
   };
@@ -68,7 +68,7 @@ onMouseLeaveBtn(element: HTMLElement, form: NgForm) {
           error: (error) => {
             console.error(error);
           },
-          complete: () => console.info('send post complete'),
+          complete: () => console.info('send mail complete'),
         });
     } else if (ngForm.submitted && ngForm.form.valid && this.mailTest) {
 
