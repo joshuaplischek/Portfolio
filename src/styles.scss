@@ -30,6 +30,11 @@ app-root {
   min-height: 100vh; /* Höhe des Viewports nutzen */
 }
 
+body.menu-open {
+  overflow: hidden;
+  height: 100vh;
+}
+
 @mixin flexCenterAll {
   display: flex;
   justify-content: center;

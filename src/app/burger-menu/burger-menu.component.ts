@@ -25,6 +25,18 @@ export class BurgerMenuComponent {
     this.languageService.toggleLanguage(checkbox.checked);
   }
 
+  ngOnChanges() {
+    if (this.isOpen) {
+      document.body.classList.add('menu-open');
+    } else {
+      document.body.classList.remove('menu-open');
+    }
+  }
+
+  ngOnDestroy() {
+    document.body.classList.remove('menu-open');
+  }
+
   closeMenu() {
     this.isOpen = false;
     this.menuClose.emit();
