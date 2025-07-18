@@ -235,6 +235,11 @@ app-footer {
   }
 }
 
+.error-message{
+  font-size: 1rem;
+  color: red;
+}
+
 .animate-dont-push {
   animation: dontPushButtonAnymore 0.1s ease forwards;
 }
@@ -263,6 +268,106 @@ app-footer {
 .privacy-policy {
   .error-message {
     margin-left: 24px;
+  }
+}
+
+/* Success Overlay Styles */
+.success-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100dvw;
+  height: 100dvh;
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(8px);
+  z-index: 10000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease-in-out;
+
+  &.show {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+.success-modal {
+  background: linear-gradient(135deg, rgb(24, 25, 25), rgb(24, 24, 24));
+  border-radius: 20px;
+  padding: 40px 30px;
+  text-align: center;
+  max-width: 400px;
+  height: 600px;
+  width: 90%;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+  transform: scale(0.8);
+  transition: transform 0.3s ease-in-out;
+  border: 2px solid $portfolioBlue;
+
+  .success-overlay.show & {
+    transform: scale(1);
+  }
+
+  .success-icon {
+    margin-bottom: 20px;
+    
+    svg {
+      animation: checkmark 0.6s ease-in-out 0.3s both;
+    }
+  }
+
+  h3 {
+    color: $portfolioBlue;
+    font-size: 24px;
+    margin-bottom: 15px;
+    font-weight: bold;
+  }
+
+  p {
+    color: white;
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 25px;
+  }
+
+  .success-btn {
+    background: $portfolioBlue;
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 25px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(51, 85, 255, 0.3);
+
+    &:hover {
+      background: darken($portfolioBlue, 10%);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(51, 85, 255, 0.4);
+    }
+  }
+}
+
+/* Checkmark Animation */
+
+
+/* Responsive */
+@media (max-width: 480px) {
+  .success-modal {
+    padding: 30px 20px;
+    
+    h3 {
+      font-size: 20px;
+    }
+    
+    p {
+      font-size: 14px;
+    }
   }
 }
 
@@ -410,4 +515,5 @@ app-footer {
       }
     }
   }
+  
 }

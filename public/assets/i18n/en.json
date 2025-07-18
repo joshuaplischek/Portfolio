@@ -269,5 +269,16 @@
     "user-one": "I had the pleasure of working with Joshua on our Join project – and I can honestly say the collaboration was consistently positive. Joshua not only brings technical expertise to the table but also a calm, structured, and reliable way of working that drives the entire team forward. Whether it was tackling complex tasks or troubleshooting together, you could always count on him. Communication was excellent, and even under tight deadlines, he remained focused and solution-oriented.",
     "user-two": "I had the opportunity to work with Joshua in the Join project (Kanban Board) as part of our team. He was a fantastic teammate who consistently offered support, motivation, and active contributions. I was especially impressed by his expertise in Angular and TypeScript, as well as his strong sense of teamwork. It was clear how much he cared about us progressing together as a team and successfully completing the project. His reliability, commitment, and knowledge played a key role in the implementation and success of our project.",
     "user-three": "I had the chance to work with Joshua on several projects during our training, including the final project. Joshua stood out for his creative approach, reliability, and strong team spirit. He consistently contributed fresh ideas, took on responsibility, and worked diligently to complete tasks. I especially appreciated his helpful nature: whenever there was uncertainty, he took the time to explain things clearly and patiently supported the team. His open communication and dedication made him a valuable asset to our collaboration."
-}
+  },
+    "form-error": {
+    "name": "Please enter your name.",
+    "message": "Please enter a message.",
+    "email": "Please enter a valid email address.",
+    "check": "Please accept the privacy policy."
+},
+  "contact-feedback": {
+    "success-title": "Message sent!",
+    "success-message": "Thank you for your message. I will get back to you as soon as possible.",
+    "success-button": "Got it"
+  }
 }

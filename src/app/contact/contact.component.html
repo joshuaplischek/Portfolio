@@ -25,7 +25,7 @@
                   <label for="">{{ 'contact.name' | translate }}</label>
                   <input #name="ngModel" [(ngModel)]="contactData.name" type="text" id="name" name="name" [placeholder]="'contact.name-tipp' | translate" required/>
                   @if (!name.valid && name.touched && !name.disabled) {
-                    <span>{{'formError.name' | translate }}</span> <!-- translation in de/ en json  -->
+                    <span class="error-message">{{'form-error.name' | translate }}</span> <!-- translation in de/ en json  -->
                   }
                 </div>
 
@@ -33,7 +33,7 @@
                   <label for="">{{ 'contact.email' | translate }}</label>
                   <input #email="ngModel" [(ngModel)]="contactData.email" type="email" id="email" name="email" [placeholder]="'contact.email-tipp' | translate" required pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}"/>
                   @if (!email.valid && email.touched && !email.disabled) {
-                    <span>{{'formError.email' | translate }}</span> <!-- translation in de/ en json  -->
+                    <span class="error-message">{{'form-error.email' | translate }}</span> <!-- translation in de/ en json  -->
                   }
                 </div>
 
@@ -41,7 +41,7 @@
                   <label for="">{{ 'contact.message' | translate }}</label>
                   <textarea #message="ngModel" minlength="4" [(ngModel)]="contactData.message" type="text" id="message" name="message" [placeholder]="'contact.message-tipp' | translate" required></textarea>
                   @if (!message.valid && message.touched && !message.disabled) {
-                    <span>{{'formError.message' | translate }}</span> <!-- translation in de/ en json  -->
+                    <span class="error-message">{{'form-error.message' | translate }}</span> <!-- translation in de/ en json  -->
                   }
                 </div>
                 <div class="privacy-policy">
@@ -55,7 +55,7 @@
                   </p>
                 </div>
                 @if (!checked.valid && !checked.disabled ) {
-                    <span>{{'formError.check' | translate }}</span> <!-- translation in de/ en json  -->
+                    <span class="error-message">{{'form-error.check' | translate }}</span> <!-- translation in de/ en json  -->
                   }
                 <div class="send">
                   <input #button (mouseenter)="onMouseEnterBtn(button, contactForm)" (mouseleave)="onMouseLeaveBtn(button, contactForm)" type="submit" value="{{ 'contact.button' | translate }}" [disabled]="!contactForm.valid || !contactData.privacy">
@@ -80,6 +80,21 @@
     </div>
   </div>
   <app-footer></app-footer>
+      <div [style]="{ 'width': '100vw'}" class="success-overlay" [class.show]="showSuccessMessage">
+    <div [style]="{ 'height': '600px'}" class="success-modal">
+      <div class="success-icon">
+        <svg width="60" height="60" viewBox="0 0 24 24" fill="none">
+          <circle cx="12" cy="12" r="10" stroke="#3355ff" stroke-width="2"/>
+          <path d="m9 12 2 2 4-4" stroke="#3355ff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </div>
+      <h3>{{ 'contact-feedback.success-title' | translate }}</h3>
+      <p>{{ 'contact-feedback.success-message' | translate }}</p>
+      <button class="success-btn" (click)="closeSuccessMessage()">
+        {{ 'contact-feedback.success-button' | translate }}
+      </button>
+    </div>
+  </div>
 </section>
 
 
