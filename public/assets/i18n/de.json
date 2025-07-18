@@ -275,5 +275,11 @@
     "contact": "Kontakt",
     "e-mail": "E-mail",
     "mail": "developer@joshuaplischek.de"
+  },
+  "user-feedback": {
+    "user-one": "Ich hatte das Vergnügen, mit Joshua im Rahmen unseres Projekts Join zusammenzuarbeiten – und ich kann nur sagen: die Zusammenarbeit war durchweg positiv. Joshua bringt nicht nur technisches Know-how mit, sondern auch eine ruhige, strukturierte und verlässliche Arbeitsweise, die das gesamte Team nach vorn bringt. Egal ob es um die Umsetzung komplexer Aufgaben oder das gemeinsame Troubleshooting ging – man konnte sich jederzeit auf ihn verlassen. Die Kommunikation lief super, und auch bei stressigen Deadlines blieb er fokussiert und lösungsorientiert.",
+    "user-two": "Ich durfte mit Joshua im Join-Projekt (Kanban Board) im Team zusammenarbeiten. Er war ein großartiger Teamkollege, der stets unterstützt, motiviert und aktiv mitgedacht hat. Besonders beeindruckt haben mich sein Fachwissen in Angular und TypeScript sowie sein ausgeprägtes Gruppengefühl. Man hat deutlich gespürt, wie wichtig es ihm war, dass wir als Team gemeinsam vorankommen und das Projekt erfolgreich abschließen.  Seine Zuverlässigkeit, sein Engagement und sein Wissen haben maßgeblich zur Umsetzung und zum Erfolg unseres Projekts beigetragen.",
+    "user-three": "Ich hatte die Gelegenheit, mit Joshua an mehreren Projekten im Rahmen unserer Umschulung zusammenzuarbeiten, darunter auch das Abschlussprojekt. Joshua überzeugte durch seine kreative Herangehensweise, seine Zuverlässigkeit und seine Teamfähigkeit. Er brachte stets frische Ideen ein, übernahm Verantwortung und arbeitete konsequent an der Umsetzung von Aufgaben. Besonders schätzte ich seine hilfsbereite Art: Bei Unklarheiten nahm er sich Zeit, Zusammenhänge verständlich zu erklären und unterstützte das Team geduldig. Durch seine offene Kommunikation und sein Engagement war er eine wertvolle Bereicherung für unsere Zusammenarbeit."
   }
+
 }
