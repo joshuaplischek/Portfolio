@@ -26,6 +26,15 @@
   }
 }
 
+.feedback-container{
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  @media (max-width: 580px) {
+    height: 210px;
+  }
+}
+
 .writer-profile-link {
   display: flex;
   align-items: center;
