@@ -19,17 +19,23 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  > div {
-    > h3 {
+
+  >div {
+    >h3 {
       font-size: 20px;
     }
   }
 }
 
-.feedback-container{
+.feedback-container {
   -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;
+  word-wrap: break-word;
+  word-break: break-word;
+  overflow-wrap: break-word;
+  hyphens: auto;
+
   @media (max-width: 580px) {
     height: 210px;
   }
@@ -38,19 +44,20 @@
 .writer-profile-link {
   display: flex;
   align-items: center;
-  > a {
+
+  >a {
     color: black;
   }
 }
 
-@media (max-width: 580px){
-  .testimonial-card{
+@media (max-width: 580px) {
+  .testimonial-card {
     width: 390px;
   }
 }
 
-@media (max-width: 480px){
-  .testimonial-card{
+@media (max-width: 480px) {
+  .testimonial-card {
     width: 230px;
   }
 }

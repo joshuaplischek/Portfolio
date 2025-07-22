@@ -3,13 +3,13 @@ section {
   flex-direction: column;
   background-image: url(/assets/img/hero/backround/ripped-paper.png);
   background-position: top;
+  background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: 200%;
   color: white;
 
-
   >div {
-        word-wrap: break-word;
+    word-wrap: break-word;
     word-break: break-word;
     overflow-wrap: break-word;
     hyphens: auto;
@@ -42,6 +42,10 @@ section {
 
   @media (max-width: 350px) {
     background-size: 500%;
+  }
+
+  @supports (-webkit-touch-callout: inherit) {
+    background-attachment: fixed;
   }
 }
 
